@@ -1,0 +1,62 @@
+.header{
+    display: block;
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    height: 175px;   
+    border: 1px solid black;
+}
+.spacer-header{
+    height:175px;
+    border: 20px solid blue;
+}
+
+.header-container{
+    display: flex;
+}
+.profile-container{
+    display: flex;
+    width: 50%;
+    border: 1px solid black;
+}
+.profile-photo{
+    margin:10px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}
+.profile-information-list{
+    list-style: none;
+}
+
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+}
+.profile-title{
+    margin: 5px;
+}
+.download{
+    width: 25%;
+    border: 1px solid black;
+}
+.download ul{
+    padding: 25px;
+    width: 100%;
+    list-style: none;
+    border: 1px solid black;
+}
+.download ul li{
+    width: 100%;    
+}
+.download ul li button{
+    width: 100%; 
+}
+.idiom-selection{
+    width: 25%;
+    border: 1px solid black;
+    text-align: right;
+}
+.idiom-selection select{
+    margin: 10px;
+}
