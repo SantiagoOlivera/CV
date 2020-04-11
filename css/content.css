@@ -1,38 +1,14 @@
 .content{
-    width: 100%;
     display: flex;
     border: 1px solid black;
     background-color: greenyellow;
-    height: auto;
-}
-.nav-container{
-    width: 25%;
-    height: 500px;
-    background-color: transparent;
-    border: 2px solid lightcoral;
-
-}
-.nav{ 
-    position: fixed;
-    width: 25%;
-    height: 100%;
-    background-color: transparent;
-}
-.menu{
-    width: 100%;
-    height: 100%;
-    border: 2px solid red;
-}
-.nav ul{
-    list-style: none;
-    margin: 10px;
-}
-.nav ul li{
-    margin:15px;
-    padding: 25px;
-    border: 2px solid black;
-    border-radius: 15px;
+   
 }
 .full-content{
     width: 75%;
+    height: auto;
+    border:3px solid green;
+}
+.content-item{
+    min-height: 200px;
 }
