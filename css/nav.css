@@ -2,19 +2,20 @@
     width: 25%;
     height: auto;
     background-color: transparent;
-    border: 2px solid lightcoral;
+    /* border: 2px solid lightcoral; */
+    
 }
 
 .nav{ 
     position: fixed;
-    margin: 5px;
-    width: 24%;
+    width: 25%;
     height: 100%;
     background-color: transparent;
+    
 }
 .nav-header{
     display: flex;
-    border:1px solid black;
+   /*  border:1px solid black; */
     height:50px;
 }
 .nav-header-title{
@@ -29,12 +30,13 @@
 }
 .menu{
     width: 100%;
-    height: 100%;
-    border: 2px solid red;
+    height: 450px;
+    /* border: 2px solid red; */
+    overflow: scroll;
 }
 .menu-items{
     list-style: none;
-    margin: 10px;
+    margin: 20px;
 }
 .menu-items li{
     margin:10px;
