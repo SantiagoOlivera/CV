@@ -1,3 +1,5 @@
+@import "header/idiom-selector.css";
+
 .content{
     display: flex;
     border: 1px solid black;
