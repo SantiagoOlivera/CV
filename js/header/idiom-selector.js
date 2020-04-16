@@ -26,7 +26,7 @@ function idiomSelector(){
                 "click",
                 () => {
                     changeSelectedIdiom( 
-                        element
+                        element, idiomSelectedItem
                     ); 
                 }
             );
@@ -54,7 +54,7 @@ function openIdiomSelect(
     }
 }
 
-function changeSelectedIdiom(element){
+function changeSelectedIdiom(element, idiomSelectedItem){
 
     //selected idiom flag
     var selectedFlagImage = document.querySelector('#selectedIdiomFlag');
@@ -64,19 +64,19 @@ function changeSelectedIdiom(element){
     switch(element.getAttribute('value')){
         case 'spanish':
             selectedFlagImage.src = "img/flags/spain-flag.jpg";
-            selectedItemText.textContent = 'Spanish';
+            selectedIdiomText.textContent = 'Spanish';
         break;
         case 'english':
             selectedFlagImage.src= "img/flags/united-kingdom-flag.jpg";
-            selectedItemText.textContent = 'English';
+            selectedIdiomText.textContent = 'English';
         break;
         case 'german':
             selectedFlagImage.src = "img/flags/deutschland-flag.png";
-            selectedItemText.textContent = 'German';
+            selectedIdiomText.textContent = 'German';
         break;
         default: 
             selectedFlagImage.src = "img/flags/spain-flag.jpg";
-            selectedItemText.textContent = 'Spanish';
+            selectedIdiomText.textContent = 'Spanish';
             
     }
 
