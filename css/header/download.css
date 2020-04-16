@@ -1,0 +1,41 @@
+.download{
+    width: 25%;
+}
+.download-formats{
+    display: flex;
+    padding: 25px;
+    
+    list-style: none;
+}
+.download-format-item{
+    padding: 5px;
+    width: 50%;
+    height: auto; 
+    border-radius: 5px;
+}
+.pdf-container{
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+.word-container{
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+}
+.pdf-container:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.word-container:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+.download-icon{
+    padding: 5px;
+}
+.download-type{
+    padding: 10px;
+}

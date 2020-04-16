@@ -1,14 +1,12 @@
 /*  Idiom Selector */
 .idiom-selection{
     width: 25%;
-    background-color: white;
 }
 .idiom-selector{
     padding: 30px;
     position: fixed;
     width: 25%;
     height: 70px;
-    background-color: white;
     /* border: 3px solid blue; */
 }
 .idiom-option-selection{
@@ -29,7 +27,8 @@
 }
 .idiom-selector-button i{
     cursor: pointer;
-    padding:5px;
+    padding:6px;
+    padding-top: 20px;
     width: 100%;
     height: 100%;
     font-size: 35px;
@@ -39,6 +38,10 @@
     background-color: lightgray;
 }
 
+.idiom-flag img{
+    width: 100%;
+    height: 100%;
+}
 .idiom-options{
     display: none;
     border: 2px solid lightgray;
@@ -46,19 +49,26 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius:10px;
     background-color: white;
+    overflow: hidden;
 }
-.idiom-options div:last-child{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius:5px;
-}
+
+
 .idiom-option{
     padding: 15px;
 }
+
 .idiom-option:hover{
     cursor:pointer;
     background-color: lightgray ;
 }
 
+.idiom-flag{
+    border-radius: 5px;
+    width: 60px;
+    height: 40px;
+    overflow: hidden;
+    border: 1px solid lightgray;
+}
 
 /* Add class properties */
 .idiom-selected-item-open{

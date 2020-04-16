@@ -14,12 +14,17 @@ function loadButtonFunctions(){
 } */
 
 function changeIdiom(){
-
+   
+   
+    
     var idiomSelector = document.querySelector('#openIdiomSelector');
-    var idiomSelectedItem = document.querySelector('.idiom-selected-item');
+    var idiomSelectedItem = document.querySelector('#selectedItemText');
     var idiomOptionSelection = document.querySelector('.idiom-option-selection');
     var idiomOptionsContainer = document.querySelector('.idiom-options');
-    var idiomOptions = document.querySelectorAll('.idiom-option')
+    var idiomOptions = document.querySelectorAll('.idiom-option');
+    
+
+    
 
     idiomSelector.addEventListener(
         "click",
@@ -35,18 +40,46 @@ function changeIdiom(){
             }
         }
     );
+    
+    
 
     idiomOptions.forEach(
         function(element){
             element.addEventListener(
-                "clcik",
+                "click",
                 () => {
-                    idiomSelectedItem.value = element.value;
-                    idiomSelectedItem.textContent = element.textContent;       
+
+                    var value = element.getAttribute('value');
+                    var image = document.getElementById('selectedIdiomFlag');
+                    
+                    idiomSelectedItem.value = value;
+                    idiomSelectedItem.textContent = element.textContent; 
+
+
+                   
+
+                    switch(value){
+                        case 'spanish':
+                            image.src = "img/flags/spain-flag.jpg";
+                            
+                        break;
+                        case 'english':
+                           
+                            image.src= "img/flags/united-kingdom-flag.jpg";
+                        break;
+                        case 'german':
+                            image.src = "img/flags/deutschland-flag.png";
+                        break;
+                        default: 
+                        image.src = "img/flags/spain-flag.jpg";
+                    }
                 }
-            )
+            );
+
+            
 
         }
     );
 
 }
+
