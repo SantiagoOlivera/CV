@@ -9,6 +9,7 @@ function idiomSelector(){
     let idiomOptions = document.querySelectorAll('.idiom-option');
     
     
+    //evento para abrir opciones del combobox
     idiomSelectorButton.addEventListener(
         "click",
         () => {
@@ -19,14 +20,16 @@ function idiomSelector(){
             );
         }
     );
-    
+
+    //evento para modificar imagen bandera y nombre del idioma 
     idiomOptions.forEach(
         function(element){
             element.addEventListener(
                 "click",
                 () => {
                     changeSelectedIdiom( 
-                        element, idiomSelectedItem
+                        element, 
+                        idiomSelectedItem
                     ); 
                 }
             );
