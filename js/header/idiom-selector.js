@@ -13,7 +13,7 @@ function idiomSelector(){
     idiomSelectorButton.addEventListener(
         "click",
         () => {
-            openIdiomSelect(
+            openAndCloseIdiomSelect(
                 idiomSelectorButton,
                 idiomOptionSelection,
                 idiomOptionsContainer
@@ -30,7 +30,12 @@ function idiomSelector(){
                     changeSelectedIdiom( 
                         element, 
                         idiomSelectedItem
-                    ); 
+                    );
+                    openAndCloseIdiomSelect(
+                        idiomSelectorButton,
+                        idiomOptionSelection,
+                        idiomOptionsContainer
+                    );
                 }
             );
         }
@@ -41,7 +46,7 @@ function idiomSelector(){
 }
 
 
-function openIdiomSelect(
+function openAndCloseIdiomSelect(
     idiomSelectorButton,
     idiomOptionSelection,  
     idiomOptionsContainer
@@ -84,5 +89,5 @@ function changeSelectedIdiom(element, idiomSelectedItem){
     }
 
     idiomSelectedItem.setAttribute( 'value', element.getAttribute('value') );
-
+    
 }

@@ -1,4 +1,5 @@
-function loadButtonFunctions(){
+function loadHeaderFunctions(){
+   showAge();
    idiomSelector();
 }
 

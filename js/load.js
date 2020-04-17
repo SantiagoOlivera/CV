@@ -1,3 +1,4 @@
 function load(){
-    loadButtonFunctions();
+    loadHeaderFunctions();
+    loadNavFunctions();
 }

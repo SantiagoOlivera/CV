@@ -2,14 +2,13 @@
 
 .content{
     display: flex;
-    border: 1px solid black;
     background-color: greenyellow;
    
 }
 .full-content{
-    width: 75%;
+    flex: 1;
     height: auto;
-    border:3px solid green;
+    border: 1px solid black;
 }
 .content-item{
     min-height: 200px;
