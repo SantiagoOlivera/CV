@@ -1,19 +1,19 @@
+@import "nav/menu.css"; 
+
 .nav-container{
-    width: 30%;
+    width: 23%;
     height: auto;
     background-color: white;
-    /* border: 2px solid lightcoral; */
     transition: ease 1s;
 }
 .nav{ 
     position: fixed;
-    width: 30%;
+    width: 23%;
     height: 100%;
     transition: ease 1s;
 }
 .nav-header{
     display: flex;
-   /*  border:1px solid black; */
     height:50px;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,0.5);
 }
@@ -25,29 +25,13 @@
     cursor: pointer;
     font-size: 50px;
 }
-.menu{
-    width: 100%;
-    height: 450px;
-    /* border: 2px solid red; */
-    overflow: scroll;
-}
-.menu-items{
-    list-style: none;
-    margin: 20px;
-}
-.menu-items li{
-    margin:10px;
-    padding: 25px;
-    border: 2px solid lightgray;
-    border-radius: 15px;
-}
 
 /* open and close nav bar css*/
 .nav-container-close{
-    width: 175px;
+    width: 10%;
 }
 .nav-close{
-    width: 175px;
+    width: 10%;
 }
 .nav-header-close{
     text-align: center;

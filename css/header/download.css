@@ -1,17 +1,17 @@
 .download{
-    width: 25%;
+    width: 20%;
+    
 }
 .download-formats{
-    display: flex;
-    padding: 25px;
-    
+    padding: 5px;
     list-style: none;
 }
 .download-format-item{
-    padding: 5px;
-    width: 50%;
+    padding:2px;
+    padding-top:10px ;
+    width: 100%;
     height: auto; 
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .pdf-container{
     display: flex;

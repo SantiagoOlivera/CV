@@ -8,7 +8,7 @@
 .full-content{
     flex: 1;
     height: auto;
-    border: 1px solid black;
+    
 }
 .content-item{
     min-height: 200px;

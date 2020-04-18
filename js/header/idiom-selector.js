@@ -1,7 +1,6 @@
 function idiomSelector(){
    
     //idiom selector
-    let idiomSelectorButton = document.querySelector('.idiom-selector-button');
     let idiomOptionSelection = document.querySelector('.idiom-option-selection');
     let idiomSelectedItem = document.querySelector('.idiom-selected-item');
     //idiom options
@@ -10,11 +9,10 @@ function idiomSelector(){
     
     
     //evento para abrir opciones del combobox
-    idiomSelectorButton.addEventListener(
+    idiomOptionSelection.addEventListener(
         "click",
         () => {
             openAndCloseIdiomSelect(
-                idiomSelectorButton,
                 idiomOptionSelection,
                 idiomOptionsContainer
             );
@@ -32,7 +30,6 @@ function idiomSelector(){
                         idiomSelectedItem
                     );
                     openAndCloseIdiomSelect(
-                        idiomSelectorButton,
                         idiomOptionSelection,
                         idiomOptionsContainer
                     );
@@ -47,7 +44,6 @@ function idiomSelector(){
 
 
 function openAndCloseIdiomSelect(
-    idiomSelectorButton,
     idiomOptionSelection,  
     idiomOptionsContainer
 ) {
@@ -55,10 +51,10 @@ function openAndCloseIdiomSelect(
     idiomOptionsContainer.classList.toggle('idiom-options-hide');
     idiomOptionSelection.classList.toggle('idiom-selected-item-open');
 
-    if(idiomSelectorButton.getAttribute('value')==="true"){
-        idiomSelectorButton.setAttribute('value', 'false');
+    if(idiomOptionSelection.getAttribute('open')==="true"){
+        idiomOptionSelection.setAttribute('open', 'false');
     }else{
-        idiomSelectorButton.setAttribute('value', 'true');
+        idiomOptionSelection.setAttribute('open', 'true');
     }
 }
 
