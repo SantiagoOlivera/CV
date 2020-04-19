@@ -1,46 +1,43 @@
-function idiomSelector(){
-   
-    //idiom selector
-    let idiomOptionSelection = document.querySelector('.idiom-option-selection');
-    let idiomSelectedItem = document.querySelector('.idiom-selected-item');
-    //idiom options
-    let idiomOptionsContainer = document.querySelector('.idiom-options');
-    let idiomOptions = document.querySelectorAll('.idiom-option');
-    
-    
-    //evento para abrir opciones del combobox
-    idiomOptionSelection.addEventListener(
-        "click",
-        () => {
-            openAndCloseIdiomSelect(
-                idiomOptionSelection,
-                idiomOptionsContainer
-            );
-        }
-    );
-
-    //evento para modificar imagen bandera y nombre del idioma 
-    idiomOptions.forEach(
-        function(element){
-            element.addEventListener(
-                "click",
-                () => {
-                    changeSelectedIdiom( 
-                        element, 
-                        idiomSelectedItem
-                    );
-                    openAndCloseIdiomSelect(
-                        idiomOptionSelection,
-                        idiomOptionsContainer
-                    );
-                }
-            );
-        }
-
-    );
+//idiom selector
+let idiomOptionSelection = document.querySelector('.idiom-option-selection');
+let idiomSelectedItem = document.querySelector('.idiom-selected-item');
+//idiom options
+let idiomOptionsContainer = document.querySelector('.idiom-options');
+let idiomOptions = document.querySelectorAll('.idiom-option');
 
 
-}
+//evento para abrir opciones del combobox
+idiomOptionSelection.addEventListener(
+    "click",
+    () => {
+        openAndCloseIdiomSelect(
+            idiomOptionSelection,
+            idiomOptionsContainer
+        );
+    }
+);
+
+//evento para modificar imagen bandera y nombre del idioma 
+idiomOptions.forEach(
+    function(element){
+        element.addEventListener(
+            "click",
+            () => {
+                changeSelectedIdiom( 
+                    element, 
+                    idiomSelectedItem
+                );
+                openAndCloseIdiomSelect(
+                    idiomOptionSelection,
+                    idiomOptionsContainer
+                );
+            }
+        );
+    }
+
+);
+
+
 
 
 function openAndCloseIdiomSelect(
@@ -58,7 +55,10 @@ function openAndCloseIdiomSelect(
     }
 }
 
-function changeSelectedIdiom(element, idiomSelectedItem){
+function changeSelectedIdiom(
+    element, 
+    idiomSelectedItem
+){
 
     //selected idiom flag
     var selectedFlagImage = document.querySelector('#selectedIdiomFlag');

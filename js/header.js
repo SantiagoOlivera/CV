@@ -1,6 +1,0 @@
-function loadHeaderFunctions(){
-   showAge();
-   idiomSelector();
-}
-
-
