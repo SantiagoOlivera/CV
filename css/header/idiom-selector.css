@@ -1,19 +1,28 @@
 /*  Idiom Selector */
 .idiom-selection{
-    width: 10%;
+    width: 30%;
+    /* border: 1px solid black; */
+    
 }
 .idiom-selector{
-    width: 10%;
-    padding: 20px;
-    padding-top: 35px;
-    position: fixed;
-    height: 70px;
+    width: 100%;
+    /* border: 1px solid black; */
+    
+    padding-top:30px;
+    padding-right:10px ;
+    height:150px;
 }
 .idiom-selector:hover{
     cursor:pointer;
 }
-
+.idiom-selector-container{
+    float: right;
+    width: 94px;
+    height: auto;
+    /* border: 1px solid black; */
+}
 .idiom-option-selection{
+    max-width: 94px;
     display: flex;
     border: 2px solid lightgray;
     border-radius: 10px 10px 10px 10px;
@@ -29,6 +38,7 @@
     height: 100%;
 }
 .idiom-options{
+    max-width: 94px;
     display: none;
     border: 2px solid lightgray;
     border-top:none;

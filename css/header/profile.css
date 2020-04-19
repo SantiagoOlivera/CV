@@ -1,7 +1,6 @@
 .profile-container{
     display: flex;
-    width: 80%;
-    /* border: 1px solid black; */
+    width:60%;
 }
 .profile-photo{
     margin:10px;

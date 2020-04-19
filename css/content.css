@@ -2,7 +2,6 @@
 
 .content{
     display: flex;
-    background-color: greenyellow;
    
 }
 .full-content{
@@ -11,5 +10,9 @@
     
 }
 .content-item{
+    margin: 40px;
     min-height: 200px;
+}
+.content-item h1{
+    font-size: 30px;
 }
