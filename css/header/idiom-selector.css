@@ -7,7 +7,6 @@
 .idiom-selector{
     width: 100%;
     /* border: 1px solid black; */
-    
     padding-top:30px;
     padding-right:10px ;
     height:150px;
@@ -16,10 +15,10 @@
     cursor:pointer;
 }
 .idiom-selector-container{
+    overflow: hidden;
     float: right;
     width: 94px;
-    height: auto;
-    /* border: 1px solid black; */
+    height:91px;
 }
 .idiom-option-selection{
     max-width: 94px;
@@ -27,6 +26,21 @@
     border: 2px solid lightgray;
     border-radius: 10px 10px 10px 10px;
 } 
+
+/*.idiom-selector-container:hover*/
+.idiom-selector-container:hover{
+    height: auto;
+}
+.idiom-selector-container:hover .idiom-option-selection{
+    border-radius: 10px 10px 0px 0px;
+}
+
+
+
+
+
+
+
 .idiom-selected-item{
     padding: 14px;
 }
@@ -39,9 +53,9 @@
 }
 .idiom-options{
     max-width: 94px;
-    display: none;
+    display: block;
     border: 2px solid lightgray;
-    border-top:none;
+    border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius:10px;
     background-color: white;

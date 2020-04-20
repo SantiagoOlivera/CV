@@ -9,22 +9,32 @@
     margin: 20px;
 }
 .menu-items li{
-    margin:5px;
+    margin:20px;
     padding: 5px;
-    border: 2px solid lightgray;
-    border-radius: 15px;
+    /* border: 2px solid lightgray;
+    border-radius: 15px; */
 }
 .menu-item{
     display: flex;
+}
+.menu-item-icon{
+    cursor:pointer;
 }
 .menu-item-icon i{
     font-size: 30px;
     padding: 5px;
     border-radius: 25px;
 }
-.menu-item-icon i:hover{
-    background-color: lightgray;
-}
+
 .menu-item-text{
     padding: 12px;
+}
+
+
+.menu-item:hover .menu-item-icon i{
+    background-color: lightgray;
+}
+.menu-item:hover .menu-item-text p{
+    cursor: pointer;
+    text-decoration: underline;
 }

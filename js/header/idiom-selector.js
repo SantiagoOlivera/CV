@@ -1,4 +1,6 @@
 //idiom selector
+let idiomSelectorContainer = document.querySelector('.idiom-selector-container');
+
 let idiomOptionSelection = document.querySelector('.idiom-option-selection');
 let idiomSelectedItem = document.querySelector('.idiom-selected-item');
 //idiom options
@@ -10,10 +12,44 @@ let idiomOptions = document.querySelectorAll('.idiom-option');
 idiomOptionSelection.addEventListener(
     "click",
     () => {
-        openAndCloseIdiomSelect(
+        
+        /* openAndCloseIdiomSelect(
             idiomOptionSelection,
             idiomOptionsContainer
-        );
+        ); */
+    }
+);
+
+
+
+idiomSelectorContainer.addEventListener(
+    'mouseover',
+    ()=>{
+        idiomSelectorContainer.style.height = "auto";
+    }
+);
+idiomSelectorContainer.addEventListener(
+    'mouseout',
+    ()=>{
+        idiomSelectorContainer.style.height = "91px";
+    }
+);
+
+idiomSelectorContainer.addEventListener(
+    'click',
+    ()=>{
+        
+        idiomOptionSelection.classList.toggle('idiom-selected-item-open');
+
+        if(idiomSelectedItem.getAttribute('open')==="false"){
+            idiomSelectorContainer.style.height = "auto";
+            idiomSelectedItem.setAttribute('open','true');
+        }else{
+            idiomSelectorContainer.style.height = "91px";
+            idiomSelectedItem.setAttribute('open','false');
+        }
+        
+
     }
 );
 
@@ -27,33 +63,41 @@ idiomOptions.forEach(
                     element, 
                     idiomSelectedItem
                 );
-                openAndCloseIdiomSelect(
-                    idiomOptionSelection,
-                    idiomOptionsContainer
-                );
+                closeIdiomSelect(idiomSelectorContainer);
+
             }
         );
     }
 
 );
 
+ function closeIdiomSelect(idiomSelectorContainer){
+     
+    idiomSelectorContainer.style.height = "91px";
+
+ }
 
 
-
-function openAndCloseIdiomSelect(
+/* function openAndCloseIdiomSelect(
     idiomOptionSelection,  
-    idiomOptionsContainer
+    idiomOptionsContainer,
+    event
 ) {
-    
-    idiomOptionsContainer.classList.toggle('idiom-options-hide');
-    idiomOptionSelection.classList.toggle('idiom-selected-item-open');
 
-    if(idiomOptionSelection.getAttribute('open')==="true"){
-        idiomOptionSelection.setAttribute('open', 'false');
-    }else{
-        idiomOptionSelection.setAttribute('open', 'true');
-    }
-}
+
+        idiomOptionsContainer.classList.toggle('idiom-options-hide');
+        idiomOptionSelection.classList.toggle('idiom-selected-item-open');
+    
+        if(idiomOptionSelection.getAttribute('open')==="true"){
+            idiomOptionSelection.setAttribute('open', 'false');
+        }else{
+            idiomOptionSelection.setAttribute('open', 'true');
+        }
+    
+} */
+
+
+
 
 function changeSelectedIdiom(
     element, 
