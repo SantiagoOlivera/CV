@@ -10,6 +10,42 @@
     <title>Curriculum Vitae</title>
 </head>
 <body>
+
+    <div id="idiomSelector">
+        <div class="idiom-selector" >
+            <div class="idiom-container">
+                <div class="idiom-close">
+                    <i id="closeIdiomSelector" class="material-icons">close</i>
+                </div>
+                <div class="idiom-item" idiom="spanish">
+                    <div class="idiom-flag">
+                        <img src="img/flags/spain-flag.jpg" alt="">
+                    </div>
+                    <div class="idiom-text">
+                        Spanish
+                    </div>
+                </div>
+                <div class="idiom-item" idiom="english">
+                    <div class="idiom-flag"  >
+                        <img src="img/flags/united-kingdom-flag.jpg" alt="">
+                    </div>
+                    <div class="idiom-text">
+                        English
+                    </div>
+                </div>
+                <div class="idiom-item"  idiom="german">
+                    <div class="idiom-flag">
+                        <img src="img/flags/deutschland-flag.png" alt="">
+                    </div>
+                    <div class="idiom-text">
+                        German
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <header>
         
         <div class="header">
@@ -20,7 +56,7 @@
 
                 <div class="profile-container">
                     <div class="profile-photo">
-                        <img src="" alt="">
+                        <img src="img/profile/bulbasaur.png" alt="">
                     </div>
                     <div class="profile-title">
                         <h1>Santiago Ariel Olivera</h1>
@@ -28,7 +64,8 @@
                             <ul class="profile-information-list">
                                 <li>Fecha de nacimiento: 25/10/1996</li>
                                 <li id="age">Edad: </li>
-                                <li>Email: <a href="">olivera.santiagoariel@gmail.com</a></li>
+                                <li>Email: <a href="mailto:olivera.santiagoariel@gmail.com">olivera.santiagoariel@gmail.com</a></li>
+                                <li>Nacinalidad: Argentina</li>
                             </ul>
                         </div>
                     </div>
@@ -60,57 +97,17 @@
                     </ul>
                 </div>
                 
-                <div class="idiom-selection">
-                        
-                        <div class="idiom-selector">
-
-                            <div class="idiom-selector-container">
-
-                                <div class="idiom-option-selection">
-                                    <div class="idiom-selected-item" open="false" value="spanish">
-                                        <div class="idiom-flag">
-                                            <img id="selectedIdiomFlag" src="img/flags/spain-flag.jpg" alt="">
-                                        </div>
-                                        <div id="selectedItemText">
-                                            Spanish
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="idiom-options">
-                                    
-                                    <div class="idiom-option" value="spanish">
-                                        <div class="idiom-flag">
-                                            <img src="img/flags/spain-flag.jpg" alt="">
-                                        </div>
-                                        <div class="idiom-text">
-                                            Spanish
-                                        </div>
-                                    </div>
-                                   
-                                    <div class="idiom-option" value="english">
-                                        <div class="idiom-flag">
-                                            <img src="img/flags/united-kingdom-flag.jpg" alt="">
-                                        </div>
-                                        <div class="idiom-text">
-                                            English
-                                        </div>
-                                    </div>
-                                    <div class="idiom-option" value="german">
-                                        <div class="idiom-flag">
-                                            <img src="img/flags/deutschland-flag.png" alt="">
-                                        </div>
-                                        <div class="idiom-text">
-                                            German
-                                        </div>
-                                    </div>
-    
-                                </div>
-                            </div>
-                           
+                <div class="idiom-selector">
+                    <div id="idiomSelected" class="idiom-selected" idiom="spanish">
+                        <div class="idiom-flag">
+                            <img src="img/flags/spain-flag.jpg" alt="">
                         </div>
-
+                        <div class="idiom-text">
+                            Spanish
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
         <div class="spacer-header">
@@ -226,6 +223,8 @@
          <script src="/js/header/idiom-selector.js"></script>       
          <script src="/js/nav/open-and-close-nav.js"></script>
          
+        <!--body-->
+        <script src="/js/body.js00"></script>
          
          <script src="js/load.js"></script>
          <script src="index.js"></script> 

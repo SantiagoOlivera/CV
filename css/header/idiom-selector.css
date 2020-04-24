@@ -1,89 +1,24 @@
-/*  Idiom Selector */
-.idiom-selection{
-    width: 30%;
-    /* border: 1px solid black; */
-    
-}
 .idiom-selector{
-    width: 100%;
-    /* border: 1px solid black; */
-    padding-top:30px;
-    padding-right:10px ;
-    height:150px;
+    width: 30%;
+    padding: 10px;
 }
-.idiom-selector:hover{
-    cursor:pointer;
-}
-.idiom-selector-container{
-    overflow: hidden;
+.idiom-selected{
     float: right;
-    width: 94px;
-    height:91px;
+    border:3px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
 }
-.idiom-option-selection{
-    max-width: 94px;
-    display: flex;
-    border: 2px solid lightgray;
-    border-radius: 10px 10px 10px 10px;
-} 
-
-/*.idiom-selector-container:hover*/
-.idiom-selector-container:hover{
-    height: auto;
-}
-.idiom-selector-container:hover .idiom-option-selection{
-    border-radius: 10px 10px 0px 0px;
-}
-
-
-
-
-
-
-
-.idiom-selected-item{
-    padding: 14px;
-}
-.idiom-selected-item h1{
-    font-size: 20px;
+.idiom-flag{
+    width:60px;
+    height: 40px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 .idiom-flag img{
     width: 100%;
     height: 100%;
 }
-.idiom-options{
-    max-width: 94px;
-    display: block;
-    border: 2px solid lightgray;
-    border-top: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius:10px;
-    background-color: white;
-    overflow: hidden;
-}
-
-
-.idiom-option{
-    padding: 15px;
-}
-
-.idiom-option:hover{
-    cursor: pointer;
-    background-color: lightgray ;
-}
-
-.idiom-flag{
-    border-radius: 5px;
-    width: 60px;
-    height: 40px;
-    overflow: hidden;
-    border: 1px solid lightgray;
-}
-
-/* Add class properties */
-.idiom-selected-item-open{
-    border-radius: 10px 10px 0px 0px;
-}
-.idiom-options-hide{
-    display: block;
+.idiom-text{
+    margin: 0 auto;
 }
