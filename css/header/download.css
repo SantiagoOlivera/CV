@@ -1,10 +1,8 @@
 .download{
     width: 10%;
-    
 }
 .download-formats{
-    padding: 5px;
-    padding-top: 30px;
+    padding: 10px;
     list-style: none;
 }
 .download-format-item{
@@ -16,12 +14,12 @@
 .pdf-container{
     display: flex;
     border-radius: 10px;
-    border: 2px solid lightgray;
+    border: 3px solid lightgray;
 }
 .word-container{
     display: flex;
     border-radius: 10px;
-    border: 2px solid lightgray;
+    border: 3px solid lightgray;
 }
 .pdf-container:hover{
     cursor: pointer;

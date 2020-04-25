@@ -12,27 +12,3 @@
     height: 100%;
     transition: ease 1s;
 }
-.nav-header{
-    display: flex;
-    height:50px;
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,0.5);
-}
-.nav-header-open-close{
-    width: 100%;
-    text-align: right;
-}
-.nav-header-open-close i{
-    cursor: pointer;
-    font-size: 50px;
-}
-
-/* open and close nav bar css*/
-.nav-container-close{
-    width: 175px;
-}
-.nav-close{
-    width: 175px;
-}
-.nav-header-close{
-    text-align: center;
-}
