@@ -5,6 +5,28 @@ let idiomSelector = document.querySelector('#idiomSelector');
 let idiomSelectorClose = document.querySelector('#closeIdiomSelector');
 let idiomItem = document.querySelectorAll('.idiom-item');
 
+
+let translations = {
+    1:{   
+            "ESP": "Fecha de Nacimiento",
+            "ENG": "Birth Date", 
+            "GER": "Geburtsdatum",
+            "DefaultTranslation": "Fecha de Nacimiento"
+    },
+    2:{
+            "ESP": "Edad",
+            "ENG": "Age", 
+            "GER": "Alter",
+            "DefaultTranslation": "Edad"
+    },
+    3:{
+            "ESP": "Nacionalidad",
+            "ENG": "Nationality", 
+            "GER": "Nationalität",
+            "DefaultTranslation": "Nacionalidad"
+    }
+}
+
 idiomSelected.addEventListener(
     "click",
     ()=>{
