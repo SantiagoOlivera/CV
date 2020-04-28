@@ -18,5 +18,8 @@
     .nav-item i{
         font-size:35px;
     }
-
+    
+    .spacer-header{
+        height: 120px;
+    }
 }

@@ -3,6 +3,7 @@
     height: 100%;
     border: 2px solid red;
     overflow: scroll;
+    background-color: white;
 }
 .menu-items{
     list-style: none;

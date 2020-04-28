@@ -1,0 +1,14 @@
+@media (max-width: 700px){
+
+    .nav-container{
+        position: fixed;
+        width: 100%;
+        
+    }
+    .nav{
+        height: 700px;
+    }
+    .menu{
+        width: 70%;
+    }
+}
