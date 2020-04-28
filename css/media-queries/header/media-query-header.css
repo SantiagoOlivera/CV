@@ -1,0 +1,22 @@
+@media (max-width: 700px){
+    
+    .profile-photo{
+        width: 60px;
+        height: 60px;
+        
+    }
+    .profile-title h1{
+        font-size: 25px;
+    }
+    
+    .profile-information{
+        display: none;
+    }
+    .nav-item{
+        padding: 5px;
+    }    
+    .nav-item i{
+        font-size:35px;
+    }
+
+}

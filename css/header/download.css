@@ -1,5 +1,6 @@
 .download{
     width: 10%;
+    border:1px solid black;
 }
 .download-formats{
     padding: 10px;

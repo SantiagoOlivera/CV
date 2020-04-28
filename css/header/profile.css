@@ -1,17 +1,50 @@
 .profile-container{
     display: flex;
+    width:100%;
+    height: auto;
+}
+.profile-photo{
+    padding: 5px;
+    width: 175px;
+    height: 175px;
+}
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+}
+.profile-title h1{
+    font-size: 45px;
+}
+.nav-item{
+    flex: 1;
+    text-align: center;
+}
+.nav-item i{
+    font-size: 45px;
+}
+.profile-data{
+    padding: 10px;
+}
+.profile-information{
+    display: block;
+}
+.profile-information-list{
+    list-style: none;
+}
+/* .profile-container{
+    display: flex;
     width:80%;
+    border:1px solid black;
 }
 .profile-photo{
     margin:10px;
     width: 150px;
     height: 150px;
     overflow: hidden;
-    
+    height: auto;
 }
-.profile-information-list{
-    list-style: none;
-}
+
+
 .profile-photo img{
     width: 100%;
     height: 100%;
@@ -21,4 +54,4 @@
 }
 .profile-title h1{
     font-size: 45px;
-}
+} */
