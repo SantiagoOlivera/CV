@@ -2,8 +2,7 @@
 
     .nav-container{
         position: fixed;
-        width: 100%;
-        
+        width: 0;
     }
     .nav{
         height: 700px;
