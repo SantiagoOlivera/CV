@@ -1,4 +1,4 @@
-.download{
+/* .download{
     width: 10%;
     border:1px solid black;
 }
@@ -35,4 +35,35 @@
 }
 .download-type{
     padding: 10px;
+} */
+
+
+.download{
+    margin: 0 auto;
+    width: 100px;
+    height: 50px;
+    
+}
+.download-selector{
+    position: relative;
+    left: -25px;
+    display: none;
+    width: 150px;
+    
+}
+.download:hover .download-selector{
+    display: block;
+    cursor: pointer;
+}
+.download-options{
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    width: 100%;
+    background-color: white;
+}
+.download-option{
+    padding: 10px;
+}
+.download-option:hover{
+    background-color: lightgray;
 }
