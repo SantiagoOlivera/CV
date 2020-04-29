@@ -2,16 +2,20 @@
 .idiom-selector{
     width: 100%;
     height: 100%;
-    max-width: 50px;
+    max-width: 110px;
     margin: 0 auto;
+    
 }
 .idiom-selected{
     border:3px solid lightgray;
-    border-radius: 10px;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
 }
+
 .idiom-flag{
-    width:30px;
-    height: 15px;
+    width:40px;
+    height: 25px;
     overflow: hidden;
     margin: 0 auto;
     border-radius: 2px;
@@ -23,7 +27,65 @@
 .idiom-text{
     margin: 0 auto;
     font-size: 10px;
+    padding: 5px;
 }
+
+/* CSS Properties For Idiom Hover Selector */
+
+.idiom-hover-selector{
+    position: relative;
+    /* top: 20px; */
+    left: -20px;
+    display: none;
+    /* border: 1px solid green; */
+    text-align: center;
+    width: 150px;
+    /* background-color: white; */
+    height: auto;
+    
+}
+.idiom-hover-conector{
+    /* position: absolute;
+    top:-20px; */
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 15px;
+    
+    
+}
+.conector-triangle{
+    position: relative;
+    top:-15px;
+    margin: 0 auto;
+    width: 30px;
+    height: 100%;
+
+    /* background-color: white; */
+    border-top: 15px solid transparent; 
+    border-left:15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid lightgray; 
+   
+}
+.idiom-selector:hover .idiom-hover-selector{
+    display: block;
+    cursor: pointer;
+}
+.idiom-options{
+    /* position: relative;
+    top:-15px; */
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    width: 100%;
+}
+.idiom-option{
+    display: flex;
+    padding: 10px;
+}
+.idiom-option:hover{
+    background-color: lightgray;
+}
+
 
 /*---- CSS Properties For Idiom Selector ----*/
 #idiomSelector{
