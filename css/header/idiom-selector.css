@@ -4,7 +4,6 @@
     height: 100%;
     max-width: 110px;
     margin: 0 auto;
-    
 }
 .idiom-selected{
     border:3px solid lightgray;
@@ -74,6 +73,7 @@
 .idiom-options{
     /* position: relative;
     top:-15px; */
+    background-color: white;
     border: 3px solid lightgray;
     border-radius: 10px;
     width: 100%;
@@ -105,7 +105,6 @@
     padding: 10px;
 }
 #idiomSelector .idiom-selector .idiom-container{
-    
     width: 100%;    
     height: 100%;
     background-color: white;
@@ -113,12 +112,9 @@
     padding: 10px;
 }
 #idiomSelector .idiom-selector .idiom-container .idiom-item{
-    
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    
-
 }
 #idiomSelector .idiom-selector .idiom-container .idiom-item:hover{
     background-color: lightgray;

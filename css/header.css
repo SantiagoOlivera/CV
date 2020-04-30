@@ -44,6 +44,9 @@
 .nav-header-close{
 
 }
+.nav-item i:hover{
+    cursor: pointer;
+}
 
 
 
