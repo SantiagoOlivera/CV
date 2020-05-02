@@ -17,9 +17,18 @@ h1{
 }
 
 
-/* Ceneric Properties */
+/* Generic Properties */
 .close{
     width: 0;
+}
+.open{
+    width: 100%;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
 }
 
 

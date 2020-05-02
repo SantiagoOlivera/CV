@@ -4,7 +4,10 @@ let idiomSelected = document.querySelector('#idiomSelected');
 let idiomSelector = document.querySelector('#idiomSelector');
 let idiomSelectorClose = document.querySelector('#closeIdiomSelector');
 let idiomItem = document.querySelectorAll('.idiom-item');
+let idiomOption = document.querySelectorAll('.idiom-option');
 
+/* */
+let idiomHoverSelector = document.querySelector('.idiom-hover-selector');
 
 let translations = {
     1:{   
@@ -40,6 +43,8 @@ idiomSelectorClose.addEventListener(
     }
 );
 
+
+
 idiomItem.forEach(
     function(element) {
         element.addEventListener(
@@ -52,6 +57,28 @@ idiomItem.forEach(
             }
         );
     }
+);
+
+idiomOption.forEach(
+    function(element) {
+        element.addEventListener(
+            "click",
+            ()=>{
+                //change idiom flag and text 
+                changeIdiom(element);
+                idiomHoverSelector.style.pointerEvents = "none";
+                
+
+            }
+        );
+    }
+);
+idiomSelected.addEventListener(
+    "mouseover",
+    ()=>{
+        idiomHoverSelector.style.pointerEvents = "auto";
+    }
+
 );
 
 function changeIdiom(element){
