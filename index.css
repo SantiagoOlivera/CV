@@ -17,6 +17,11 @@ h1{
 }
 
 
+/* Ceneric Properties */
+.close{
+    width: 0;
+}
+
 
 
 

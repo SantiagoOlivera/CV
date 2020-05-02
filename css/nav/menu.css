@@ -1,18 +1,17 @@
 .menu{
-    width: 100%;
+    width: auto;
     height: 100%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     background-color: white;
+    padding-top:10px ;
 }
-
 .menu-container{
+    position: fixed; 
     width: 30%;
-    transition: 1s;
-    overflow: hidden;
-    height: auto;
-    position: fixed;
+    height:550px;
+    transition: ease 1s;
+    /* border: 3px solid blue; */
     overflow: scroll;
-    border: 3px solid blue;
 }
 .menu-items{
     list-style: none;
@@ -39,8 +38,6 @@
 .menu-item-text{
     padding: 12px;
 }
-
-
 .menu-item:hover .menu-item-icon i{
     background-color: lightgray;
 }

@@ -2,11 +2,11 @@
 
 .nav{
     position: static;
-    width: 33.33%;
+    width: 30%;
     height: auto;
-    background-color: white;
+    /* background-color: white; */
     transition: ease 1s;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     overflow: hidden;
 }
 .nav-container{ 
@@ -14,6 +14,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
-    border:20px solid greeN;
+    /* border:5px solid greeN; */
 }
 

@@ -8,11 +8,16 @@ openAndCloseNav.addEventListener(
     "click",
     () => {
         
+        navContainer.classList.toggle("close");
+        menuContainer.classList.toggle("close");
         //navContainer.classList.toggle('nav-container-open');
-        if(navContainer.getAttribute("open")==="true"){
-            navContainer.style.width = 0;
+        /* if(navContainer.getAttribute("open")==="true"){
+            
+            navContainer.style.width = "0%";
+             
             menuContainer.style.position = "static";
-            menuContainer.style.width = 0;
+            menuContainer.style.width = "0%";
+            
             navContainer.setAttribute("open", "false");
         }else{
             
@@ -25,7 +30,7 @@ openAndCloseNav.addEventListener(
                 navContainer.style.width = "33.33%";
             }
             navContainer.setAttribute("open", "true");
-        }
+        } */
 
         //nav.classList.toggle('nav-close');
         //navHeaderOpenClose.classList.toggle('nav-header-close');

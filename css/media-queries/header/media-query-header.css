@@ -22,4 +22,14 @@
     .spacer-header{
         height: 111px;
     }
+
+
+    /* disapear hover selectors */
+    .idiom-selector:hover .idiom-hover-selector{
+        display: none;
+    }
+
+    .download:hover .download-hover-selector{
+        display: none;
+    }
 }
