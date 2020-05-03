@@ -4,6 +4,7 @@
     height: 100%;
     max-width: 110px;
     margin: 0 auto;
+    cursor: pointer;
 }
 .idiom-selected{
     border:3px solid lightgray;

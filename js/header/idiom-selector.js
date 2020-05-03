@@ -5,8 +5,6 @@ let idiomSelector = document.querySelector('#idiomSelector');
 let idiomSelectorClose = document.querySelector('#closeIdiomSelector');
 let idiomItem = document.querySelectorAll('.idiom-item');
 let idiomOption = document.querySelectorAll('.idiom-option');
-
-/* */
 let idiomHoverSelector = document.querySelector('.idiom-hover-selector');
 
 let translations = {
@@ -33,7 +31,10 @@ let translations = {
 idiomSelected.addEventListener(
     "click",
     ()=>{
-        idiomSelector.style.display = "block";
+        
+        if(window.innerWidth < 700 ){
+            idiomSelector.style.display = "block";
+        }
     }
 );
 idiomSelectorClose.addEventListener(

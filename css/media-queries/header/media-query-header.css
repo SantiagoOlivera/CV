@@ -20,7 +20,7 @@
     }
     
     .spacer-header{
-        height: 111px;
+        height: 110px;
     }
 
 
@@ -31,5 +31,11 @@
 
     .download:hover .download-hover-selector{
         display: none;
+    }
+}
+
+@media (max-width: 340px){
+    .spacer-header{
+        height: 129px;
     }
 }

@@ -5,6 +5,7 @@
 .header{
     display: block;
     position: fixed;
+    z-index:10;
     background-color: white;
     width: 100%;
     height: auto;
@@ -23,7 +24,7 @@
 }
 .spacer-header{
     height:225px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .nav-header-open-close{
