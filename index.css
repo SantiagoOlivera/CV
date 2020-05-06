@@ -5,6 +5,7 @@
 /* Media Queries */
 @import "css/media-queries/header/media-query-header.css";
 @import "css/media-queries/nav/media-query-nav.css";
+@import "css/media-queries/content/media-query-content.css";
 
 *{
     margin: 0;
@@ -30,7 +31,12 @@ h1{
 .hide{
     display: none;
 }
-
+.right{
+    float: right;
+}
+.left{
+    float: left;
+}
 
 
 

@@ -42,4 +42,11 @@ openAndCloseNav.addEventListener(
         } */
     }
 );
-    
+
+navContainer.addEventListener(
+    "click",
+    () => {
+        navContainer.classList.toggle("close");
+        menuContainer.classList.toggle("close");
+    }
+);

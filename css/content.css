@@ -1,4 +1,5 @@
 @import "header/idiom-selector.css";
+@import "content/timeline.css";
 
 .content{
     display: flex;

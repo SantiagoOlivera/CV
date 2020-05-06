@@ -1,0 +1,8 @@
+@media (max-width: 700px){
+    .line{
+        left: 0;
+    }
+    .timeline-item-right{
+        float: left;
+    }
+} 
