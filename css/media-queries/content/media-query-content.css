@@ -2,7 +2,8 @@
     .line{
         left: 0;
     }
-    .timeline-item-right{
-        float: left;
+    .timeline-item-container:nth-child(even) .timeline-item{
+        left: 0;
+        animation: slide 0.5s forwards;
     }
 } 

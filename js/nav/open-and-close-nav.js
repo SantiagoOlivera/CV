@@ -10,6 +10,7 @@ openAndCloseNav.addEventListener(
         
         navContainer.classList.toggle("close");
         menuContainer.classList.toggle("close");
+        
         //navContainer.classList.toggle('nav-container-open');
         /* if(navContainer.getAttribute("open")==="true"){
             

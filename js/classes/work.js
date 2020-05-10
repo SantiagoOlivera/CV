@@ -1,4 +1,5 @@
 class Work{
+
     constructor(
         year, 
         title, 
@@ -8,15 +9,15 @@ class Work{
     ){
         this.year = year;
         this.title = title;
-        this.startDate = startDate; 
-        this.endDate = endDate;
+        this.startDate = new Date(startDate); 
+        this.endDate = new Date(endDate);
         this.description = description;
         this.tasks = null;
 
-    }
-    
-    addTask(){
+        this.time = new GenericFunction().dateDiff(this.startDate, this.endDate);
         
     }
+    
+    
 
 }
