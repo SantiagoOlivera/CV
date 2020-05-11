@@ -1,54 +1,8 @@
 class GenericFunction{
 
-    dateDiff(startDate, endDate){
-        //this function returns a JSON with diference time beetween startDate and endDate
-        
-        if(startDate <= endDate){
-           
-            var years = endDate.getFullYear() - startDate.getFullYear();
-
-            var months = endDate.getFullYear() === startDate.getFullYear() ? 
-                            endDate.getMonth() - startDate.getMonth() : 
-                            ( (12 - startDate.getMonth() ) + endDate.getMonth() ) % 12 
-            ;
-            
-            var days = endDate.getDate() - 1;
-
-                if(months===0){
-                    months=0;
-                }
-                else{
-                    if(endDate.getMonth() < startDate.getMonth()){
-                        months--;
-                        years--;
-                    }
-                }
-                    console.log(years);
-                    console.log(months);
-                    console.log(days);
-        }
-
-        var time = {
-            days: days,
-            months: months,
-            years: years    
-        };
-
-        console.log(time);
-
-
-        
-        return time;
-
-    }
-
-    getMonthName(month){
-        switch(month){
-            
-        }
-    }
-
+    
     monthsNames = {
+
         spanish: {
             1:  'Enero',
             2:  'Febrero',
@@ -92,5 +46,73 @@ class GenericFunction{
             12: 'Dezember',
         } 
     }
+
+    dateDiff(startDate, endDate){
+        //this function returns a JSON with diference time beetween startDate and endDate
+        
+        if(startDate <= endDate){
+           
+
+            var years = endDate.getFullYear() - startDate.getFullYear();
+
+            var months = endDate.getFullYear() === startDate.getFullYear() ? 
+                            endDate.getMonth() - startDate.getMonth() : 
+                            ( (12 - startDate.getMonth() ) + endDate.getMonth() ) % 12 
+            ;
+            
+            var days = endDate.getDate() - 1;
+
+                if(months===0){
+                    months=0;
+                }
+                else{
+                    if(endDate.getMonth() < startDate.getMonth()){
+                        months--;
+                        years--;
+                    }
+                }
+                    console.log(years);
+                    console.log(months);
+                    console.log(days);
+        }
+
+        var time = {
+            days: days,
+            months: months,
+            years: years    
+        };
+
+        console.log(time);
+
+
+        
+        return time;
+
+    }
+
+
+
+    getMonthName(month, idiom){
+        
+        if(month>=1 && month<=12){
+
+            switch(idiom){
+                case 1:
+                    return this.monthsNames.spanish[month];
+                    break;
+                case 2:
+                    return this.monthsNames.english[month];
+                    break;
+                case 3: 
+                    return this.monthsNames.german[month];
+                    break;
+                default:
+                    return this.monthsNames.spanish[month];
+    
+            }
+        }
+    } 
+
+
 
 }

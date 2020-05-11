@@ -7,6 +7,7 @@ class Work{
         endDate,
         description
     ){
+        
         this.year = year;
         this.title = title;
         this.startDate = new Date(startDate); 
@@ -17,6 +18,8 @@ class Work{
         this.time = new GenericFunction().dateDiff(this.startDate, this.endDate);
         
     }
+
+
     
     
 

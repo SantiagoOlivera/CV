@@ -3,14 +3,25 @@ let timelineItemsContainer = document.querySelector('.timeline-items-container')
 
 function getTimelineItemsHTMLText(timelineItems){
     
+    
+
+
     console.log(timelineItems);
     var timelineItemsHTMLText = "";
     console.log(timelineItemsHTMLText);
 
+    var GenericFunctions = new GenericFunction();
+    
+    //idioms for months
+    // 1 - spanish
+    // 2 - english
+    // 3 - german
+    var idiom = 1;
+
+
     timelineItems.forEach(
         
         element => {
-            
             timelineItemsHTMLText = ` ${timelineItemsHTMLText} 
 
                 <div class="timeline-item-container">
@@ -26,21 +37,28 @@ function getTimelineItemsHTMLText(timelineItems){
                         </div>
                         <br>
                         <div class="timeline-item-start">
-                            <p>Inicio: ${element.startDate}</p>
+                            <p>
+                                Inicio: 
+                                    ${GenericFunctions.getMonthName( element.startDate.getMonth() + 1 , idiom ) } 
+                                    ${ element.startDate.getFullYear() } 
+                            </p>
                         </div>
                         <div class="timeline-item-end">
-                            <p>Fin: ${element.endDate}</p>
+                            <p>Fin:
+                                ${ GenericFunctions.getMonthName( element.endDate.getMonth() + 1 , idiom ) } 
+                                ${ element.endDate.getFullYear() }
+                            </p>
                         </div>
                         <div class="timeline-item-time">
                             <p>Tiempo: 
-                                ${ element.time.years  === 0 ? '' : element.time.years  + ' <span id="">años</span>'  } 
-                                ${ element.time.months === 0 ? '' : element.time.months + ' <span id="">meses</span>' } 
-                                ${ element.time.days   === 0 ? '' : element.time.days   + ' <span id="">dias</span>'  }
+                                ${ element.time.years  === 0 ? '' : element.time.years  + ' <span idTranslate="">años</span>'  } 
+                                ${ element.time.months === 0 ? '' : element.time.months + ' <span idTranslate="">meses</span>' } 
+                                ${ element.time.days   === 0 ? '' : element.time.days   + ' <span idTranslate="">dias</span>'  }
                             </p>
                         </div>
                         <br>
                         <div class="timeline-item-description">
-                            ${ element.description }
+                                ${ element.description }
                         </div>
                         <br>
                         <div class="timeline-item-programing-languages">
@@ -65,46 +83,11 @@ function getTimelineItemsHTMLText(timelineItems){
     console.log(timelineItemsHTMLText);
     timelineItemsContainer.innerHTML = timelineItemsHTMLText;
     
+    
 
 }
 
 
-
-
-//Observable timeline width
-let fullContent = document.querySelector('.full-content');
-let line = document.querySelector('.line');
-let leftSideItems = document.querySelectorAll('.timeline-item');
-
-const myObserver = new ResizeObserver(entries => {
-    // iterate over the entries, do something.
-    //console.log("cambio de tamaño:");
-    //console.log(fullContent.clientWidth);
-    //console.log(leftSideItems);
-    if(fullContent.clientWidth<=800){
-
-        line.classList.add('line-in-left-side');
-
-        leftSideItems.forEach(
-            function(element){
-                element.classList.add('timeline-item-left');
-            }
-        ); 
-
-    }else{
-
-        line.classList.remove('line-in-left-side');
-    
-        leftSideItems.forEach(
-            function(element){
-                element.classList.remove('timeline-item-left');
-            }
-        ); 
-
-    }
-});
-
-myObserver.observe(fullContent);
   
 
 
