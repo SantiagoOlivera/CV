@@ -6,9 +6,9 @@ function getTimelineItemsHTMLText(timelineItems){
     
 
 
-    console.log(timelineItems);
+    //console.log(timelineItems);
     var timelineItemsHTMLText = "";
-    console.log(timelineItemsHTMLText);
+    //console.log(timelineItemsHTMLText);
 
     var GenericFunctions = new GenericFunction();
     
@@ -22,6 +22,27 @@ function getTimelineItemsHTMLText(timelineItems){
     timelineItems.forEach(
         
         element => {
+            
+            var programingLanguagesHTMLText = ""; 
+            
+            if(element.programingLanguages!==undefined){
+
+
+                element.programingLanguages.forEach(
+                        
+                        element => {
+
+                            programingLanguagesHTMLText =  `${programingLanguagesHTMLText} 
+                            <div class="programing-language-item">
+                                <div class="programing-language-title">
+                                    ${element.title}
+                                </div>
+                            </div>`            
+                        }
+                )
+            }
+            
+
             timelineItemsHTMLText = ` ${timelineItemsHTMLText} 
 
                 <div class="timeline-item-container">
@@ -61,16 +82,12 @@ function getTimelineItemsHTMLText(timelineItems){
                                 ${ element.description }
                         </div>
                         <br>
+                        <h4>Herramientas utilizadas</h4>
                         <div class="timeline-item-programing-languages">
-                            <h4>Herramientas utilizadas</h4>
-                            <div class=" programing-language-item">
-                                <div class="programing-language-logo">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="programing-language-title">
-                            </div>
-
-                            </div>
+                            
+                            
+                            ${programingLanguagesHTMLText}
+                                
                         </div>
 
                     </div>
@@ -80,7 +97,7 @@ function getTimelineItemsHTMLText(timelineItems){
 
     );
 
-    console.log(timelineItemsHTMLText);
+    //console.log(timelineItemsHTMLText);
     timelineItemsContainer.innerHTML = timelineItemsHTMLText;
     
     

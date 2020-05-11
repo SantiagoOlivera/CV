@@ -32,7 +32,7 @@
     width:100%;
     padding:10px;
     /* border: 3px solid red; */
-    height: 400px;
+    height: 450px;
 }
 .timeline-item{
     /* float: left; */
@@ -63,7 +63,18 @@
 .line-in-left-side{
     left:0;
 }
-
+.timeline-item-programing-languages{
+    display: flex;
+    flex-wrap: wrap;
+}
+.programing-language-item{
+    padding: 5px;
+}
+.programing-language-title{
+    padding: 10px;
+    border: 3px solid lightgray;
+    border-radius: 5px;
+}
 
 @keyframes slide{
     100% { 

@@ -71,9 +71,9 @@ class GenericFunction{
                         years--;
                     }
                 }
-                    console.log(years);
-                    console.log(months);
-                    console.log(days);
+                    //console.log(years);
+                    //console.log(months);
+                    //console.log(days);
         }
 
         var time = {
@@ -82,7 +82,7 @@ class GenericFunction{
             years: years    
         };
 
-        console.log(time);
+        //console.log(time);
 
 
         
