@@ -20,22 +20,22 @@ h1{
 
 /* Generic Properties */
 .close{
-    width: 0;
+    width: 0  !important;
 }
 .open{
-    width: 100%;
+    width: 100%  !important;
 }
 .show{
-    display: block;
+    display: block !important;
 }
 .hide{
-    display: none;
+    display: none  !important;
 }
 .right{
-    float: right;
+    float: right  !important;
 }
 .left{
-    float: left;
+    float: left  !important;
 }
 
 
