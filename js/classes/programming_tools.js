@@ -1,4 +1,4 @@
-class ProgramingLanguage{
+class ProgrammingTool{
     
     constructor(
         title,

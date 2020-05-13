@@ -23,16 +23,16 @@ function getTimelineItemsHTMLText(timelineItems){
         
         element => {
             
-            var programingLanguagesHTMLText = ""; 
+            var programingToolsHTMLText = ""; 
             
-            if(element.programingLanguages!==undefined){
+            if(element.programingTools!==undefined){
 
 
-                element.programingLanguages.forEach(
+                element.programingTools.forEach(
                         
                         element => {
 
-                            programingLanguagesHTMLText =  `${programingLanguagesHTMLText} 
+                            programingToolsHTMLText =  `${programingToolsHTMLText} 
                             <div class="programing-language-item">
                                 <div class="programing-language-title">
                                     ${element.title}
@@ -86,7 +86,7 @@ function getTimelineItemsHTMLText(timelineItems){
                         <div class="timeline-item-programing-languages">
                             
                             
-                            ${programingLanguagesHTMLText}
+                            ${programingToolsHTMLText}
                                 
                         </div>
 

@@ -6,7 +6,7 @@ class Work{
         startDate, 
         endDate,
         description,
-        programingLanguages
+        programingTools
     ){
         
         this.year = year;
@@ -16,7 +16,7 @@ class Work{
         this.description = description;
         this.tasks = null;
         this.time = new GenericFunction().dateDiff(this.startDate, this.endDate);
-        this.programingLanguages = programingLanguages;
+        this.programingTools = programingTools;
         
     }
 

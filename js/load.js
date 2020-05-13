@@ -23,8 +23,8 @@ function loadObjects(){
                 '12/01/2015',
                 'Descripcion Prueba',
                 [
-                    new ProgramingLanguage('ASP.Net'),
-                    new ProgramingLanguage('SQL Server'),
+                    new ProgrammingTool('ASP.Net'),
+                    new ProgrammingTool('SQL Server'),
                 ]
             ), 
            new Work(
@@ -34,9 +34,9 @@ function loadObjects(){
                 '07/01/2017',
                 'Descripcion Prueba',
                 [
-                    new ProgramingLanguage('Drupal'),
-                    new ProgramingLanguage('MySQL'),
-                    new ProgramingLanguage('PHP')
+                    new ProgrammingTool('Drupal'),
+                    new ProgrammingTool('MySQL'),
+                    new ProgrammingTool('PHP')
                 ]
             ),
             new Work(
@@ -46,9 +46,9 @@ function loadObjects(){
                 '05/01/2019', 
                 'Descripcion Prueba',
                 [
-                    new ProgramingLanguage('Visual Basic.Net'),
-                    new ProgramingLanguage('SQL Server'),
-                    new ProgramingLanguage('C#'),
+                    new ProgrammingTool('Visual Basic.Net'),
+                    new ProgrammingTool('SQL Server'),
+                    new ProgrammingTool('C#'),
                 ] 
             ),
             new Work(
@@ -58,9 +58,9 @@ function loadObjects(){
                 '05/10/2020', 
                 'Descripcion Prueba',
                 [
-                    new ProgramingLanguage('Meta4'),
-                    new ProgramingLanguage('Oracle SQL with Toad'),
-                    new ProgramingLanguage('Java'),
+                    new ProgrammingTool('Meta4'),
+                    new ProgrammingTool('Oracle SQL with Toad'),
+                    new ProgrammingTool('Java'),
                 ]
             ), 
         ];
