@@ -23,8 +23,7 @@
     font-size: 45px;
 }
 .nav-item:hover i{
-    background-color: rgba(0,0,0,0.1);
-    border-radius: 10px;
+    color: rgba(0,0,0,0.5);
 }
 .profile-data{
     padding: 10px;

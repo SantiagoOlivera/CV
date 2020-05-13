@@ -32,6 +32,8 @@
     .download:hover .download-hover-selector{
         display: none;
     }
+
+
 }
 
 @media (max-width: 340px){

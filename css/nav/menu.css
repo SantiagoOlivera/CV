@@ -11,7 +11,7 @@
     height:550px;
     transition: ease 0.5s;
     /* border: 3px solid blue; */
-    overflow: scroll;
+    overflow: auto;
 }
 .menu-items{
     list-style: none;

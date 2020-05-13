@@ -64,15 +64,20 @@
     cursor: pointer;
 }
 
+.download-close i:hover{
+    color: rgba(0, 0, 0, 0.5);
+}
+
 .download-item{
     width: 100%;
     height: 55px;
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
 .download-item:hover{
-    cursor: pointer;
     background-color: lightgray;
+
 }
 .download-item-title{
     text-align: center;

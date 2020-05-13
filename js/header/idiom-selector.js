@@ -32,7 +32,7 @@ idiomSelected.addEventListener(
     "click",
     ()=>{
         
-        if(window.innerWidth < 700 ){
+        if(window.innerWidth < 850 ){
             idiomSelector.style.display = "block";
         }
     }
