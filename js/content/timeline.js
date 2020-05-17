@@ -1,7 +1,7 @@
 //timeline Items
 let timelineItemsContainer = document.querySelector('.timeline-items-container');
 
-function getTimelineItemsHTMLText(timelineItems){
+function setTimelineItemsHTMLText(timelineItems){
     
     
 
@@ -60,7 +60,7 @@ function getTimelineItemsHTMLText(timelineItems){
                         <div class="timeline-item-start">
                             <p>
                                 Inicio: 
-                                    ${GenericFunctions.getMonthName( element.startDate.getMonth() + 1 , idiom ) } 
+                                    ${ GenericFunctions.getMonthName( element.startDate.getMonth() + 1 , idiom ) } 
                                     ${ element.startDate.getFullYear() } 
                             </p>
                         </div>

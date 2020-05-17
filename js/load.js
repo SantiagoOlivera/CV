@@ -1,9 +1,11 @@
 function load(){
     
     loadObjects();
+    //console.log(data.objs);
     
-    getPersonalData(data.objs[0].obj);
-    getTimelineItemsHTMLText(data.objs[1].obj);
+    getPersonalData(data.objs.person);
+    setTimelineItemsHTMLText(data.objs.work_experience);
+    setStudiesItemsHTMLText(data.objs.studies);
 
 }
 
@@ -13,7 +15,11 @@ const data = { 'objs': [] };
 function loadObjects(){
         
         
-        var person = new Person('Santiago','Olivera','10/25/1996');
+        var person = new Person(
+            'Santiago',
+            'Olivera',
+            '10/25/1996'
+        );
         
         var workExperience = [ 
             new Work(
@@ -65,15 +71,109 @@ function loadObjects(){
             ), 
         ];
 
-        //person data
-        data.objs.push({
-            'id': 'person',
-            'obj': person
-        });
-        //timeline items
-        data.objs.push({
-            'id': 'work_experience',
-            'obj': workExperience
-        });
+        var studies = [
+            new Study(
+            /*     
+                title,
+                type,
+                state,
+                startDate, 
+                endDate,
+                institution,
+                description,
+                programingTools 
+            */
+                'Técnico en Computación',
+                'Secundario',
+                'Completado',
+                '03/01/2010',
+                '12/01/2015',
+                'Escuela Técnica Nro 35 Ing. Eduardo Latzina',
+                'Descripcion de Prueba',
+                [
+                    new ProgrammingTool(
+                        'C',
+                    ),
+                    new ProgrammingTool(
+                        'C++'
+                    ),
+                    new ProgrammingTool(
+                        'Visual Basic 6.0'
+                    ),
+                    new ProgrammingTool(
+                        'MySQL'
+                    ),
+                    new ProgrammingTool(
+                        'Java'
+                    )
+                ]
+            ),
+            new Study(
+                    'Webmaster',
+                    'Curso',
+                    'Completado',
+                    '06/01/2019',
+                    '08/01/2019',
+                    'UTN',
+                    'Curso de HTML5, CSS3, Javascript, MySQL y PHP',
+                    [
+                        new ProgrammingTool(
+                            'HTML5',
+                        ),
+                        new ProgrammingTool(
+                            'CSS3'
+                        ),
+                        new ProgrammingTool(
+                            'Javascript'
+                        ),
+                        new ProgrammingTool(
+                            'MySQL'
+                        ),
+                        new ProgrammingTool(
+                            'PHP'
+                        )
+                    ]
+            ),
+            new Study(
+                    'Web Avanzado',
+                    'Curso',
+                    'Completado',
+                    '09/01/2019',
+                    '12/01/2019',
+                    'UTN',
+                    'Curso de Node.JS, Express, MongoDB, Angular y React. Manejo de ',
+                    [   
+                        new ProgrammingTool(
+                            'Javascript'
+                        ),
+                        new ProgrammingTool(
+                            'Node.JS',
+                        ),
+                        new ProgrammingTool(
+                            'Express JS'
+                        ),
+                        new ProgrammingTool(
+                            'MongoDB'
+                        ),
+                        new ProgrammingTool(
+                            'Angular'
+                        ),
+                        new ProgrammingTool(
+                            'React.JS'
+                        )
+
+                    ]
+            ),
+        ];
+
+        data.objs = {
+            //person data
+            'person' : person,
+            //timeline items
+            'work_experience' : workExperience,
+            //studies
+            'studies': studies
+        }
+            
 
 }
