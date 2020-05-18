@@ -1,14 +1,13 @@
 @import "header/idiom-selector.css";
 @import "content/timeline.css";
+@import "content/studies.css";
 
 .content{
     display: flex;
-   
 }
 .full-content{
     flex: 1;
     height: auto;
-    
 }
 .content-item{
     margin: 40px;

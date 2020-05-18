@@ -32,10 +32,11 @@ function setTimelineItemsHTMLText(timelineItems){
                         
                         element => {
 
-                            programingToolsHTMLText =  `${programingToolsHTMLText} 
+                            programingToolsHTMLText =  ` ${programingToolsHTMLText} 
+                            
                             <div class="programing-language-item">
                                 <div class="programing-language-title">
-                                    ${element.title}
+                                    ${ element.title }
                                 </div>
                             </div>`            
                         }
