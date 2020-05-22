@@ -1,6 +1,8 @@
 @import "header/idiom-selector.css";
 @import "content/timeline.css";
 @import "content/studies.css";
+@import "content/idiom.css";
+@import "content/knowledges.css";
 
 .content{
     display: flex;

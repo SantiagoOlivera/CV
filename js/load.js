@@ -6,11 +6,13 @@ function load(){
     getPersonalData(data.objs.person);
     setTimelineItemsHTMLText(data.objs.work_experience);
     setStudiesItemsHTMLText(data.objs.studies);
+    setIdiomsItemsHTMLText(data.objs.idioms);
 
 }
 
 //load objects for the page
 const data = { 'objs': [] };
+
 
 function loadObjects(){
         
@@ -166,13 +168,29 @@ function loadObjects(){
             ),
         ];
 
+
+        var idioms = [
+
+            new Idiom(
+                'Español',
+                '100'
+            ),
+            new Idiom(
+                'Inglés',
+                '90'
+            )
+        ];
+
+
         data.objs = {
             //person data
             'person' : person,
             //timeline items
             'work_experience' : workExperience,
             //studies
-            'studies': studies
+            'studies': studies,
+            //idioms
+            'idioms': idioms
         }
             
 

@@ -3,7 +3,7 @@
 let idiomSelected = document.querySelector('#idiomSelected');
 let idiomSelector = document.querySelector('#idiomSelector');
 let idiomSelectorClose = document.querySelector('#closeIdiomSelector');
-let idiomItem = document.querySelectorAll('.idiom-item');
+let idiomItem = document.querySelectorAll('#idiomSelector .idiom-item');
 let idiomOption = document.querySelectorAll('.idiom-option');
 let idiomHoverSelector = document.querySelector('.idiom-hover-selector');
 

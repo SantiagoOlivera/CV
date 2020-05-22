@@ -4,7 +4,7 @@ let line = document.querySelector('.line');
 let leftSideItems = document.querySelectorAll('.timeline-item');
 
 
-const myObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver(entries => {
     // iterate over the entries, do something.
     //console.log("cambio de tamaño:");
     //console.log(fullContent.clientWidth);
@@ -32,4 +32,4 @@ const myObserver = new ResizeObserver(entries => {
     }
 });
 
-myObserver.observe(fullContent);
+resizeObserver.observe(fullContent);
