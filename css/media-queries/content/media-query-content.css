@@ -9,8 +9,17 @@
     }
     
 }
-@media (max-width: 550px){
+@media (max-width: 620px){
     .study-item{
         margin: 0 auto;
+    }
+    .knowledge-item{
+        margin: 0 auto;
+    }
+    .timeline-item{
+        margin:0 auto !important;
+    }
+    .timeline-item-left{
+        left:0 !important;
     }
 }

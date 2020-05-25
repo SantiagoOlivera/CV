@@ -8,7 +8,7 @@ function loadPorcentageCircles(entries, observer){
 
     for (entry of entries) {
         
-        console.log(entry);
+        //console.log(entry);
 
         if (entry.isIntersecting) {
             

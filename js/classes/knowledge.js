@@ -1,13 +1,43 @@
 class Knowledge{
 
+
     constructor(
         title,
-        level,
         programingTools
     ){
+
         this.title = title,
-        this.level = level,
         this.programingTools = programingTools;
+        
+        this.calcLevel();
+
     }
+
+    calcLevel(){
+
+        var programingToolsLevels = [];
+            
+        if(this.programingTools.length!==0){
+            
+            this.programingTools.forEach(element => {
+                programingToolsLevels.push(
+                    Number.parseInt(
+                        element.level
+                    )
+                );
+            })
+
+        }
+
+
+        this.setLevel( new GenericFunction().prom(programingToolsLevels) );
+
+    }
+
+    setLevel(level){
+        this.level = level;
+    }
+
+
     
 }

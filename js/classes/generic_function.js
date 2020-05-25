@@ -114,5 +114,23 @@ class GenericFunction{
     } 
 
 
+    
+    //...array
+
+    prom(array){
+        
+        //return prom of undefined number of parameters
+
+        var prom = 0; 
+        
+        array.forEach(element => {
+            prom += element;
+        });
+
+        prom = prom / array.length;
+
+        return prom;
+    }
+
 
 }

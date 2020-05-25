@@ -4,9 +4,11 @@ function load(){
     //console.log(data.objs);
     
     getPersonalData(data.objs.person);
+    
     setTimelineItemsHTMLText(data.objs.work_experience);
     setStudiesItemsHTMLText(data.objs.studies);
     setIdiomsItemsHTMLText(data.objs.idioms);
+    //setKnowledgesItemsHTMLText(data.objs.knowledges);
 
 }
 
@@ -181,16 +183,83 @@ function loadObjects(){
             )
         ];
 
+        var knowledges = [
+            
+            new Knowledge(
+                'Frontend',
+                [
+                    new ProgrammingTool(
+                        'HTML',
+                        100
+                    ),
+                    new ProgrammingTool(
+                        'CSS',
+                        90
+                    ),
+                    new ProgrammingTool(
+                        'Javascript',
+                        75
+                    )
+                ]
+                
+            ),
+            new Knowledge(
+                'Backend',
+                [
+                    new ProgrammingTool(
+                        'Visual Basic',
+                        60
+                    ),
+                    new ProgrammingTool(
+                        'C#',
+                        60
+                    ),
+                    new ProgrammingTool(
+                        'PHP',
+                        60
+                    ),
+                    new ProgrammingTool(
+                        'Node JS',
+                        60
+                    )
+                ]
+                
+            ),
+            new Knowledge(
+                'Data Base',
+                [
+                    new ProgrammingTool(
+                        'SQL Server',
+                        50
+                    ),
+                    new ProgrammingTool(
+                        'Oracle',
+                        50
+                    ),
+                    new ProgrammingTool(
+                        'MySQL',
+                        50
+                    )
+                ]
+                
+            )
+
+        ];
+
 
         data.objs = {
+
             //person data
             'person' : person,
             //timeline items
-            'work_experience' : workExperience,
+            'work_experience': workExperience,
             //studies
             'studies': studies,
             //idioms
-            'idioms': idioms
+            'idioms': idioms,
+            //knowledges
+            'knowledges': knowledges
+            
         }
             
 
