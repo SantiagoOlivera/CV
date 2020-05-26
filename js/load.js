@@ -8,7 +8,7 @@ function load(){
     setTimelineItemsHTMLText(data.objs.work_experience);
     setStudiesItemsHTMLText(data.objs.studies);
     setIdiomsItemsHTMLText(data.objs.idioms);
-    //setKnowledgesItemsHTMLText(data.objs.knowledges);
+    setKnowledgesItemsHTMLText(data.objs.knowledges);
 
 }
 

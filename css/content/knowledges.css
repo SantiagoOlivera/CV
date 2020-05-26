@@ -2,7 +2,7 @@
     margin: 0 auto;
     width:100%;
     max-width: 1200px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 10px;
 }
 .knowledge-container{
@@ -12,7 +12,7 @@
     min-width: 330px;
     display: flex;
     flex-wrap:wrap ;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 10px;
     text-align: center;
 }
@@ -50,7 +50,7 @@
     width: 0%;
     height: 100%;
     background-color: #FFCC00;
-    transition: 0.5s;
+    transition: 3s;
 }
 .porcentage-loading-number{
     float: left;
@@ -60,6 +60,53 @@
     /* border:1px solid black; */
     width: 100%;
 }
-.knowledge-procentage-circle{
+
+/* Porcentage circle */
+
+
+.knowledge-item-level{
+    /* display: block; */
+    margin:0 auto;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    /* border:1px solid black; */
+}
+
+.knowledge-porcentage-circle circle{
+   
+   /*  width: 100%;
+    max-width: 80px;
+    height: 100%;
+    max-height: 80px; */
+    fill:none;
+    stroke-width: 15;
+    transform: translate(10px, 10px);
+    border:1px solid black;
     
+    /*  
+    width: 100%;
+    height: 100%;
+    fill:none;
+    stroke-width: 15; 
+   */
+    
+}
+.knowledge-porcentage{
+    position: relative;
+    top: 50px;
+}
+
+.knowledge-porcentage-circle circle:nth-child(1){
+    stroke-dasharray: 3 4;
+}
+.knowledge-porcentage-circle circle:nth-child(2){
+    stroke:white;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 880px;
+    transition: 3s;
+}
+.knowledge-porcentage-circle circle:nth-child(3){
+    stroke:rgba(0,0,0,0.3); 
+    stroke-dasharray: 3 4;
 }
