@@ -6,9 +6,13 @@
 
 .content{
     display: flex;
+    margin: 0 auto;
+    max-width: 1500px;
 }
 .full-content{
+
     flex: 1;
+    
     height: auto;
 }
 .content-item{
