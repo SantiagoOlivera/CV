@@ -10,7 +10,7 @@
     /* border: 1px solid blue; */
     padding: 10px;
 }
-.idiom-item{
+.idiom-card{
     cursor: pointer;
     margin: 5px auto;
     width: 100%;
@@ -97,3 +97,4 @@
 .idiom-porcentage-left{
     left:5px;
 }
+

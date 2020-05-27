@@ -21,7 +21,7 @@ function setIdiomsItemsHTMLText(idioms){
             
             idiomsHTMLText = ` ${ idiomsHTMLText } 
 
-                <div class="idiom-item">
+                <div class="idiom-card">
 
                     <div class="idiom-item-container ${ element.level < 100 ? '.idiom-porcentage-left' : '' }">
 
