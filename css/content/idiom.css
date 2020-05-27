@@ -23,7 +23,7 @@
     transition:0.5s;
 
 }
-.idiom-item:hover{
+.idiom-card:hover{
     transform: translateY(-10px);
 }
 .idiom-title{
