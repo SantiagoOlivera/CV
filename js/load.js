@@ -65,7 +65,7 @@ function loadObjects(){
                 2019,
                 "Istorming S.A.", 
                 '05/02/2019', 
-                '05/10/2020', 
+                new Date(), /* actualidad */
                 'Descripcion Prueba',
                 [
                     new ProgrammingTool('Meta4'),

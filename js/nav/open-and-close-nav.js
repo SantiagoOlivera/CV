@@ -47,7 +47,7 @@ openAndCloseNav.addEventListener(
 navContainer.addEventListener(
     "click",
     () => {
-        navContainer.classList.toggle("close");
-        menuContainer.classList.toggle("close");
+        //navContainer.classList.toggle("close");
+        //menuContainer.classList.toggle("close");
     }
 );

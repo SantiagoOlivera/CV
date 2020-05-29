@@ -36,15 +36,105 @@ observerIdiomCircles.observe(idioms);
 
 var knowledgesItems = document.querySelector('.knowledges');
 var knowledgesPorcentageCircles = document.querySelectorAll('.knowledge-porcentage-circle');
-var porcentageLineLoading = document.querySelectorAll('.porcentage-line-loading');
+//var porcentageLineLoading = document.querySelectorAll('.porcentage-line-loading');
+var knowledges = document.querySelectorAll('.knowledge-item');
+
 
 var observerKnowledgeCircle = new IntersectionObserver(loadKnowledgesPorcentageCircles);
 
+
+
 function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
+
+    var porcentageLines = null;
+    console.log(porcentageLines);
     
-    var cont = 0;
+    entries.forEach(
+        
+        entry => {
+
+
+            //console.log(entry);
+            
+            if (entry.isIntersecting) {
+
+                //console.log(entry.target);
+                var knowledgesIndex = entry.target.getAttribute('index');
+                console.log(knowledgesIndex);
+
+               //console.log(entry.target.children[0].children[1].children[1].children[1]);
+               //porcentage cirlce load
+               entry.target.children[0].children[1].children[1].children[1].style.strokeDashoffset = `${ 
+                   ( 880 - ( ( 190 * Math.round(data.objs.knowledges[knowledgesIndex].level) ) / 100 ) ) 
+                } `;
+               
+
+               /* porcentageLines = document.querySelectorAll(
+                   ' .knowledge-container > :nth-child(' +  knowledgesIndex+1  + ')'+
+                   ' .knowledge-item-container'+ 
+                   ' .knowledge-programming-tools'+ 
+                   ' .porcentage-line'
+               ); */
+               
+               porcentageLines = [].slice.call(entry.target.children[0].children[2].children);
+
+               console.log(porcentageLines);
+               
+               var i = 0;
+               porcentageLines.forEach(
+                   element => {
+                       if (element.classList[0]==="porcentage-line"){
+                            element.children[1].style.width = `${ data.objs.knowledges[knowledgesIndex].programingTools[i].level }%`;
+                            i++;
+                       }
+                   }
+               );
+               
+               
+               //console.log(porcentageLines);
+            
+                
+
+               /* porcentageLines.forEach(
+                   element => {
+                       element.children[1].style.width = data.objs.knowledges[knowledgesIndex].programingTools[i].level + '%';
+                       i++;
+                   }
+               ); */
+               
+               
+               
+               
+               //console.log(entry.target.children[0].children[2].children);
+               
+               
+               /* entry.target.children[0].children[2].children.forEach(
+                    element =>{
+                        if(element.classList[0]==="porcentage-line"){
+                            element.style.width = "100%";
+                        }
+                    }
+               ); */
+               /* entry.target.children[0].children[1].children[1].programingTools.forEach(
+                   element => {
+                       console.log(element);
+                       //element.style.width = "100%";
+                   }
+               ); */
+            
+    
+                    
+                        
+                
+            }
+        }
+    );
+
+    /* var cont = 0;
 
     for(entry of entries){
+
+        console.log(entry);
         
         if (entry.isIntersecting) {
             
@@ -65,17 +155,39 @@ function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
             
             console.log(cont);
             console.log(data.objs.knowledges);
+            console.log(knowledgesPorcentageCircles);
 
-            porcentageLineLoading.forEach(
+            /knowledgesPorcentageCircles.forEach(
                 element => {
-                    element.style.width = `${ data.objs.knowledges[0].level }%`;
+
+                    element.style.width = `${ 
+                        data.objs.knowledges[cont].programmingTools.forEach(
+                            element => {
+                                
+                            }
+                        )
+                     }%`;
+
+                    cont++;
                     
                 }
-            );
+            );  
             
         }
+        
     }
+    */
+
+    
+
 }
 
-observerKnowledgeCircle.observe(knowledgesItems);
+
+//init observers
+
+knowledges.forEach(
+    element => {
+        observerKnowledgeCircle.observe(element);
+    }
+);
  
