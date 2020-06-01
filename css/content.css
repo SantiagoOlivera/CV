@@ -10,15 +10,28 @@
     max-width: 1500px;
 }
 .full-content{
-
     flex: 1;
-    
     height: auto;
 }
 .content-item{
     margin: 40px;
+
     min-height: 200px;
+    /* padding-top: 250px; */
 }
 .content-item h1{
+    font-size: 45px;
+    text-align: center;
+}
+.timeline h1{
+    font-size: 30px;
+}
+.studies h1{
+    font-size: 30px;
+}
+.knowledges h1{
+    font-size: 30px;
+}
+.idioms h1{
     font-size: 30px;
 }

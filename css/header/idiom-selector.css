@@ -8,9 +8,10 @@
 }
 .idiom-selected{
     border:1px solid lightgray;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     display: flex;
-    padding: 5px;
+    padding: 9px;
+    height: 45px;
 }
 
 .idiom-flag{
@@ -75,8 +76,8 @@
     /* position: relative;
     top:-15px; */
     background-color: white;
-    border: 3px solid lightgray;
-    border-radius: 10px;
+    border: 1px solid lightgray;
+    /* border-radius: 10px; */
     width: 100%;
 }
 .idiom-option{
