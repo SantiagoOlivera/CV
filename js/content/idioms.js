@@ -23,23 +23,27 @@ function setIdiomsItemsHTMLText(idioms){
 
                 <div class="idiom-card">
 
-                    <div class="idiom-item-container ${ element.level < 100 ? '.idiom-porcentage-left' : '' }">
+                    <div class="idiom-container-card">
 
-                        <div class="idiom-title">
-                            <h1><span>${element.title}</span></h1>
-                        </div>
+                            <div class="idiom-item-container ${ element.level < 100 ? '.idiom-porcentage-left' : '' }">
 
-                        <div class="idiom-porcentage">
-                            <h1>${element.level}%</h1>
-                        </div>
+                                <div class="idiom-title">
+                                    <h1><span>${element.title}</span></h1>
+                                </div>
 
-                        <div class="idiom-circle">
-                            <svg class="procentage-circle">
-                                <circle  cx="70" cy="70" r="70" stroke="${porcentageCircleColor}"></circle>
-                                <circle  cx="70" cy="70" r="70" ></circle>
-                                <circle  cx="70" cy="70" r="70" ></circle>
-                            </svg>
-                        </div>
+                                <div class="idiom-porcentage">
+                                    <h1>${element.level}%</h1>
+                                </div>
+
+                                <div class="idiom-circle">
+                                    <svg class="procentage-circle">
+                                        <circle  cx="70" cy="70" r="70" stroke="${porcentageCircleColor}"></circle>
+                                        <circle  cx="70" cy="70" r="70" ></circle>
+                                        <circle  cx="70" cy="70" r="70" ></circle>
+                                    </svg>
+                                </div>
+
+                            </div>
 
                     </div>
 
