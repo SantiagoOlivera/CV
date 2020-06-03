@@ -18,6 +18,8 @@ function setTimelineItemsHTMLText(timelineItems){
     // 3 - german
     var idiom = 1;
 
+    var cont = 0;
+
 
     timelineItems.forEach(
         
@@ -48,7 +50,7 @@ function setTimelineItemsHTMLText(timelineItems){
 
                 <div class="timeline-item-container">
                                                         
-                    <div class="timeline-item">
+                    <div class="timeline-item"  index="${cont}">
                         
                         <div class="timeline-item-year">
                             <h1>${element.year}</h1>
@@ -93,6 +95,8 @@ function setTimelineItemsHTMLText(timelineItems){
 
                     </div>
             </div>`;
+
+            cont++;
 
         }
 

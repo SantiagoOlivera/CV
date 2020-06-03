@@ -2,13 +2,21 @@ function load(){
     
     loadObjects();
     //console.log(data.objs);
-    
+
     getPersonalData(data.objs.person);
     
+    //load html data
     setTimelineItemsHTMLText(data.objs.work_experience);
     setStudiesItemsHTMLText(data.objs.studies);
     setIdiomsItemsHTMLText(data.objs.idioms);
     setKnowledgesItemsHTMLText(data.objs.knowledges);
+
+
+    //trastalate objects description and titles according selected idiom:
+    //0-Spanish
+    //1-English
+    //2-German
+    translate(0);
 
 }
 

@@ -7,7 +7,7 @@ let idiomItem = document.querySelectorAll('#idiomSelector .idiom-item');
 let idiomOption = document.querySelectorAll('.idiom-option');
 let idiomHoverSelector = document.querySelector('.idiom-hover-selector');
 
-let translations = {
+/* let translations = {
     1:{   
             "ESP": "Fecha de Nacimiento",
             "ENG": "Birth Date", 
@@ -26,7 +26,7 @@ let translations = {
             "GER": "Nationalität",
             "DefaultTranslation": "Nacionalidad"
     }
-}
+} */
 
 idiomSelected.addEventListener(
     "click",
@@ -74,6 +74,7 @@ idiomOption.forEach(
         );
     }
 );
+
 idiomSelected.addEventListener(
     "mouseover",
     ()=>{
@@ -90,9 +91,26 @@ function changeIdiom(element){
     //console.log(element);
     //console.log(element.children[0].children[0].src);
     //console.log(element.children[1].innerText);
+
+    switch(element.getAttribute('idiom')){
+        case 'spanish':
+            translate(0);
+            break;
+        case 'english':
+            translate(1);
+            break;
+        case 'german':
+            translate(2);
+            break;
+
+    }
+
     idiomSelected.setAttribute('idiom', element.getAttribute('idiom'));
     flag.src = element.children[0].children[0].src;
-    text.textContent = element.children[1].innerText;          
+    text.textContent = element.children[1].innerText;
+    
+
+    
 
 }
 

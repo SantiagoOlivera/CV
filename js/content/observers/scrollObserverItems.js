@@ -1,10 +1,14 @@
+//scroll observer idioms
 var  idioms = document.querySelector('#idioms');
 var  idiomItems = document.querySelectorAll('.procentage-circle');
 
 
-var  observerIdiomCircles = new IntersectionObserver(loadPorcentageCircles);
+var  observerIdiomCircles = new IntersectionObserver(
+    loadIdiomsPorcentageCircles,
+    {threshold: 0.5}
+);
 
-function loadPorcentageCircles(entries, observerIdiomCircles){
+function loadIdiomsPorcentageCircles(entries, observerIdiomCircles){
 
     for (entry of entries) {
         
@@ -34,14 +38,17 @@ function loadPorcentageCircles(entries, observerIdiomCircles){
 observerIdiomCircles.observe(idioms);
 
 
+
+//scroll observer knowledges
 var knowledgesItems = document.querySelector('.knowledges');
 var knowledgesPorcentageCircles = document.querySelectorAll('.knowledge-porcentage-circle');
-//var porcentageLineLoading = document.querySelectorAll('.porcentage-line-loading');
 var knowledges = document.querySelectorAll('.knowledge-item');
 
 
-var observerKnowledgeCircle = new IntersectionObserver(loadKnowledgesPorcentageCircles);
-
+var observerKnowledgeCircle = new IntersectionObserver(
+    loadKnowledgesPorcentageCircles,
+    {threshold: 0.5}
+);
 
 
 function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
@@ -60,7 +67,7 @@ function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
 
                 //console.log(entry.target);
                 var knowledgesIndex = entry.target.getAttribute('index');
-                console.log(knowledgesIndex);
+                //console.log(knowledgesIndex);
 
                //console.log(entry.target.children[0].children[1].children[1].children[1]);
                //porcentage cirlce load
@@ -78,7 +85,7 @@ function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
                
                porcentageLines = [].slice.call(entry.target.children[0].children[2].children);
 
-               console.log(porcentageLines);
+               //console.log(porcentageLines);
                
                var i = 0;
                porcentageLines.forEach(
@@ -89,105 +96,57 @@ function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
                        }
                    }
                );
-               
-               
-               //console.log(porcentageLines);
-            
-                
-
-               /* porcentageLines.forEach(
-                   element => {
-                       element.children[1].style.width = data.objs.knowledges[knowledgesIndex].programingTools[i].level + '%';
-                       i++;
-                   }
-               ); */
-               
-               
-               
-               
-               //console.log(entry.target.children[0].children[2].children);
-               
-               
-               /* entry.target.children[0].children[2].children.forEach(
-                    element =>{
-                        if(element.classList[0]==="porcentage-line"){
-                            element.style.width = "100%";
-                        }
-                    }
-               ); */
-               /* entry.target.children[0].children[1].children[1].programingTools.forEach(
-                   element => {
-                       console.log(element);
-                       //element.style.width = "100%";
-                   }
-               ); */
-            
-    
-                    
-                        
+                   
                 
             }
         }
     );
 
-    /* var cont = 0;
-
-    for(entry of entries){
-
-        console.log(entry);
-        
-        if (entry.isIntersecting) {
-            
-            cont = 0;
-
-            knowledgesPorcentageCircles.forEach(
-                
-                element => {
-                    
-                    element.children[1].style.strokeDashoffset = `${ ( 880 - ( ( 190 * Math.round(data.objs.knowledges[cont].level) ) / 100 ) ) } `;
-                    cont++;
-
-                }
-                    
-            );
-
-            cont = 0;
-            
-            console.log(cont);
-            console.log(data.objs.knowledges);
-            console.log(knowledgesPorcentageCircles);
-
-            /knowledgesPorcentageCircles.forEach(
-                element => {
-
-                    element.style.width = `${ 
-                        data.objs.knowledges[cont].programmingTools.forEach(
-                            element => {
-                                
-                            }
-                        )
-                     }%`;
-
-                    cont++;
-                    
-                }
-            );  
-            
-        }
-        
-    }
-    */
-
-    
 
 }
 
 
 //init observers
-
 knowledges.forEach(
     element => {
         observerKnowledgeCircle.observe(element);
     }
 );
- 
+
+
+//scroll observer timeline
+var timelineItems = document.querySelectorAll('.timeline-item');
+
+var observerSlideTimelineItem = new IntersectionObserver(
+    slideTimelineItem,
+    {threshold: 0.5}
+);
+
+function slideTimelineItem(entries,observerSlideTimelineItem){
+    //console.log(entries);
+    //console.log(entry.target.getAttribute('index'));
+    entries.forEach(
+        entry => {
+
+            
+
+            if(entry.isIntersecting){
+                //console.log(entry);
+                timelineItem = entry.target;
+                //console.log(timelineItem);
+                if(timelineItem.getAttribute('index')%2===0){
+                    timelineItem.classList.add('timeline-item-animation');
+                }else{
+                    timelineItem.classList.add('timeline-item-even-animation');
+                }
+            }
+        }
+    );
+    
+}
+
+timelineItems.forEach(
+    element => {
+        observerSlideTimelineItem.observe(element);
+    }
+);
