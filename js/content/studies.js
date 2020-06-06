@@ -92,9 +92,21 @@ function setStudiesItemsHTMLText(studies){
                                 Tiempo
                             </span>:
                             <span>
-                                ${ element.time.years  === 0 ? '' : element.time.years  + ' <span idTranslate="16">años</span>'  } 
-                                ${ element.time.months === 0 ? '' : element.time.months + ' <span idTranslate="21">meses</span>' } 
-                                ${ element.time.days   === 0 ? '' : element.time.days   + ' <span idTranslate="23">dias</span>'  }
+                                ${ 
+                                    element.time.years === 0 ? '' : 
+                                    element.time.years === 1 ? element.time.years  + ' <span idTranslate="15">año</span>': 
+                                    element.time.years  + ' <span idTranslate="16">años</span>'  
+                                } 
+                                ${ 
+                                    element.time.months === 0 ? '' : 
+                                    element.time.months === 1 ? element.time.months + ' <span idTranslate="20">mes</span>':
+                                    element.time.months + ' <span idTranslate="21">meses</span>' 
+                                } 
+                                ${ 
+                                    element.time.days === 0 ? '' : 
+                                    element.time.days === 1 ? element.time.days + ' <span idTranslate="22">dia</span>':
+                                    element.time.days + ' <span idTranslate="23">dias</span>' 
+                                }
                             </span>
                         </p>
                     </div>
@@ -110,7 +122,7 @@ function setStudiesItemsHTMLText(studies){
                     <div class="study-item-programming-tools">
                         <h4>
                             <span idTranslate="24">
-                                Herramientas de Programacion utilizadas
+                                Herramientas de Programacion utilizados
                             </span>
                         </h4>
                         ${ programingToolsHTMLText }

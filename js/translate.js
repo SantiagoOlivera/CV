@@ -179,7 +179,7 @@ const translations = {
     },
     //Herramientas de Programación utilizadas
     24:{
-        'ESP':'Lenguajes de Programación utilizadas',
+        'ESP':'Lenguajes de Programación utilizados',
         'ENG':'Programming Languages used',
         'GER':'Verwendete Programmiersprachen'
     },

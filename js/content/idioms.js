@@ -54,7 +54,6 @@ function setIdiomsItemsHTMLText(idioms){
                 </div>
             
             `;
-.
 
 
         }
