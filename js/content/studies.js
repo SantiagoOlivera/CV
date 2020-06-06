@@ -92,23 +92,27 @@ function setStudiesItemsHTMLText(studies){
                                 Tiempo
                             </span>:
                             <span>
-                                ${ element.time.years  === 0 ? '' : element.time.years  + ' <span idTranslate="">años</span>'  } 
-                                ${ element.time.months === 0 ? '' : element.time.months + ' <span idTranslate="">meses</span>' } 
-                                ${ element.time.days   === 0 ? '' : element.time.days   + ' <span idTranslate="">dias</span>'  }
+                                ${ element.time.years  === 0 ? '' : element.time.years  + ' <span idTranslate="16">años</span>'  } 
+                                ${ element.time.months === 0 ? '' : element.time.months + ' <span idTranslate="21">meses</span>' } 
+                                ${ element.time.days   === 0 ? '' : element.time.days   + ' <span idTranslate="23">dias</span>'  }
                             </span>
                         </p>
                     </div>
                     <br>
                     <div class="study-item-description">
                         <p>
-                            <span>
-                                ${element.description}
+                            <span idTranslate="${element.description[1]}">
+                                ${element.description[0]}
                             </span>
                         </p>
                     </div>
                     <br>
                     <div class="study-item-programming-tools">
-                        <h4><span>Herramientas de Programacion utilizadas</span></h4>
+                        <h4>
+                            <span idTranslate="24">
+                                Herramientas de Programacion utilizadas
+                            </span>
+                        </h4>
                         ${ programingToolsHTMLText }
                     </div>
                 </div>

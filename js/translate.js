@@ -177,7 +177,12 @@ const translations = {
         'ENG':'days',
         'GER':'Tage'
     },
-
+    //Herramientas de Programación utilizadas
+    24:{
+        'ESP':'Lenguajes de Programación utilizadas',
+        'ENG':'Programming Languages used',
+        'GER':'Verwendete Programmiersprachen'
+    },
     //Enero
     101: {
         'ESP':'Enero',

@@ -95,13 +95,13 @@ function loadObjects(){
                 description,
                 programingTools 
             */
-                'Técnico en Computación',
-                'Secundario',
+                ['Técnico en Computación',0],
+                ['Secundario',0],
                 'Completado',
                 '03/01/2010',
                 '12/01/2015',
-                'Escuela Técnica Nro 35 Ing. Eduardo Latzina',
-                'Descripcion de Prueba',
+                ['Escuela Técnica Nro 35 Ing. Eduardo Latzina', 0],
+                ['Descripcion de Prueba', 0],
                 [
                     new ProgrammingTool(
                         'C',
@@ -121,13 +121,13 @@ function loadObjects(){
                 ]
             ),
             new Study(
-                    'Webmaster',
-                    'Curso',
-                    'Completado',
+                    ['Webmaster',0],
+                    ['Curso',0],
+                    ['Completado',0],
                     '06/01/2019',
                     '08/01/2019',
                     'UTN',
-                    'Curso de HTML5, CSS3, Javascript, MySQL y PHP',
+                    ['Curso de HTML5, CSS3, Javascript, MySQL y PHP', 0],
                     [
                         new ProgrammingTool(
                             'HTML5',
@@ -147,13 +147,13 @@ function loadObjects(){
                     ]
             ),
             new Study(
-                    'Web Avanzado',
-                    'Curso',
-                    'Completado',
+                    ['Web Avanzado', 0],
+                    ['Curso', 0 ],
+                    ['Completado', 0],
                     '09/01/2019',
                     '12/01/2019',
                     'UTN',
-                    'Curso de Node.JS, Express, MongoDB, Angular y React. Manejo de ',
+                    ['Curso de Node.JS, Express, MongoDB, Angular y React. Manejo de ', 0],
                     [   
                         new ProgrammingTool(
                             'Javascript'
@@ -182,11 +182,13 @@ function loadObjects(){
         var idioms = [
 
             new Idiom(
-                'Spanish',
+                //First Element idiom title
+                //Second is the idtranslate
+                ['Spanish', 7],
                 '100'
             ),
             new Idiom(
-                'English',
+                ['English', 8],
                 '90'
             )
         ];

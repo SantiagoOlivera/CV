@@ -29,8 +29,8 @@ function setIdiomsItemsHTMLText(idioms){
 
                                 <div class="idiom-title">
                                     <h1>
-                                        <span idTranslate="">
-                                            ${element.title}
+                                        <span idTranslate="${element.title[1]}">
+                                            ${element.title[0]}
                                         </span>
                                     </h1>
                                 </div>
@@ -54,7 +54,7 @@ function setIdiomsItemsHTMLText(idioms){
                 </div>
             
             `;
-
+.
 
 
         }
