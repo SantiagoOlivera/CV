@@ -36,7 +36,7 @@ window.addEventListener(
 );
 
 var menuLinks = document.querySelectorAll('.menu-item-text p a');
-console.log(menuLinks);
+//console.log(menuLinks);
 menuLinks.forEach(
     element => {
         element.addEventListener(
