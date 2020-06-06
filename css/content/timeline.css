@@ -56,6 +56,10 @@
     border: 1px solid lightgray;
     
 } 
+.timeline-item p{
+    text-align: center;
+}
+
 .timeline-item-container:nth-child(even) .timeline-item{
     left: 55%;
     /* animation: slide_right 0.5s forwards; */

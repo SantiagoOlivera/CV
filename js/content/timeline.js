@@ -1,22 +1,15 @@
 //timeline Items
 let timelineItemsContainer = document.querySelector('.timeline-items-container');
 
+
 function setTimelineItemsHTMLText(timelineItems){
     
-    
-
-
     //console.log(timelineItems);
     var timelineItemsHTMLText = "";
     //console.log(timelineItemsHTMLText);
 
     var GenericFunctions = new GenericFunction();
     
-    //idioms for months
-    // 1 - spanish
-    // 2 - english
-    // 3 - german
-    var idiom = 1;
 
     var cont = 0;
 
@@ -62,22 +55,39 @@ function setTimelineItemsHTMLText(timelineItems){
                         <br>
                         <div class="timeline-item-start">
                             <p>
-                                Inicio: 
-                                    ${ GenericFunctions.getMonthName( element.startDate.getMonth() + 1 , idiom ) } 
+                                <span idTranslate="18">Inicio</span>:
+                                    <span idTranslate="${ GenericFunctions.getMonthName( element.startDate.getMonth() + 1 ).idTranslate }">
+                                        ${ GenericFunctions.getMonthName( element.startDate.getMonth() + 1 ).name } 
+                                    </span> 
                                     ${ element.startDate.getFullYear() } 
                             </p>
                         </div>
                         <div class="timeline-item-end">
-                            <p>Fin:
-                                ${ GenericFunctions.getMonthName( element.endDate.getMonth() + 1 , idiom ) } 
+                            <p>
+                            <span idTranslate="19">Fin</span>:
+                                <span idTranslate="${ GenericFunctions.getMonthName( element.endDate.getMonth() + 1).idTranslate }"> 
+                                    ${ GenericFunctions.getMonthName( element.endDate.getMonth() + 1 ).name } 
+                                </span>
                                 ${ element.endDate.getFullYear() }
                             </p>
                         </div>
                         <div class="timeline-item-time">
-                            <p>Tiempo: 
-                                ${ element.time.years  === 0 ? '' : element.time.years  + ' <span idTranslate="">años</span>'  } 
-                                ${ element.time.months === 0 ? '' : element.time.months + ' <span idTranslate="">meses</span>' } 
-                                ${ element.time.days   === 0 ? '' : element.time.days   + ' <span idTranslate="">dias</span>'  }
+                            <p><span idTranslate="17">Tiempo</span>: 
+                                ${  
+                                    element.time.years  === 0 ? '' : 
+                                    element.time.years === 1 ? element.time.years  + ' <span idTranslate="15">año</span>':
+                                    element.time.years  + ' <span idTranslate="16">años</span>'
+                                } 
+                                ${ 
+                                    element.time.months === 0 ? '' :
+                                    element.time.months === 1 ? element.time.months + ' <span idTranslate="20">mes</span>':
+                                    element.time.months + ' <span idTranslate="21">meses</span>' 
+                                } 
+                                ${ 
+                                    element.time.days === 0 ? '' : 
+                                    element.time.days === 1 ? element.time.days + ' <span idTranslate="22">dia</span>':
+                                    element.time.days + ' <span idTranslate="23">dias</span>'
+                                }
                             </p>
                         </div>
                         <br>
@@ -85,9 +95,12 @@ function setTimelineItemsHTMLText(timelineItems){
                                 ${ element.description }
                         </div>
                         <br>
-                        <h4>Herramientas utilizadas</h4>
+                        <h4>
+                            <span idTranslate="">
+                                Herramientas de Programación utilizadas
+                            </span>
+                        </h4>
                         <div class="timeline-item-programing-languages">
-                            
                             
                             ${programingToolsHTMLText}
                                 

@@ -182,11 +182,11 @@ function loadObjects(){
         var idioms = [
 
             new Idiom(
-                'Español',
+                'Spanish',
                 '100'
             ),
             new Idiom(
-                'Inglés',
+                'English',
                 '90'
             )
         ];

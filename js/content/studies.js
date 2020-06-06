@@ -66,31 +66,31 @@ function setStudiesItemsHTMLText(studies){
                     <br>
                     <div class="study-item-start">
                         <p>
-                            <span>
-                                Inicio:
+                            <span idTranslate="18">
+                                Inicio
+                            </span>:
+                            <span idTranslate="${ GenericFunctions.getMonthName( element.startDate.getMonth() + 1 ).idTranslate }">
+                                ${ GenericFunctions.getMonthName( element.startDate.getMonth() + 1 ).name }
                             </span>
-                            <span>
-                                ${ GenericFunctions.getMonthName( element.startDate.getMonth() + 1 , idiom ) }
                                 ${ element.startDate.getFullYear() }
-                            </span>
                         </p>
                     </div>
                     <div class="study-item-end">
                         <p>
-                            <span>
-                                Fin:
+                            <span idTranslate="19">
+                                Fin
+                            </span>:
+                            <span idTranslate="${ GenericFunctions.getMonthName( element.endDate.getMonth() + 1  ).idTranslate }">
+                                ${ GenericFunctions.getMonthName( element.endDate.getMonth() + 1  ).name }
                             </span>
-                            <span>
-                                ${ GenericFunctions.getMonthName( element.endDate.getMonth() + 1 , idiom ) }
                                 ${ element.endDate.getFullYear() }
-                            </span>
                         </p>
                     </div>
                     <div class="study-item-time">
                         <p>
-                            <span>
-                                Tiempo:
-                            </span>
+                            <span idTranslate="17">
+                                Tiempo
+                            </span>:
                             <span>
                                 ${ element.time.years  === 0 ? '' : element.time.years  + ' <span idTranslate="">años</span>'  } 
                                 ${ element.time.months === 0 ? '' : element.time.months + ' <span idTranslate="">meses</span>' } 

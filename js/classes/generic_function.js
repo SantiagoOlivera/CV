@@ -79,7 +79,7 @@ class GenericFunction{
         var time = {
             days: days,
             months: months,
-            years: years    
+            years: years,  
         };
 
         //console.log(time);
@@ -92,25 +92,14 @@ class GenericFunction{
 
 
 
-    getMonthName(month, idiom){
+    getMonthName(month){
         
-        if(month>=1 && month<=12){
-
-            switch(idiom){
-                case 1:
-                    return this.monthsNames.spanish[month];
-                    break;
-                case 2:
-                    return this.monthsNames.english[month];
-                    break;
-                case 3: 
-                    return this.monthsNames.german[month];
-                    break;
-                default:
-                    return this.monthsNames.spanish[month];
-    
+            return {
+                name: this.monthsNames.spanish[month],
+                idTranslate: 100 + month 
             }
-        }
+                   
+        
     } 
 
 

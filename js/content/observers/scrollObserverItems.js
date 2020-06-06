@@ -54,7 +54,6 @@ var observerKnowledgeCircle = new IntersectionObserver(
 function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
 
     var porcentageLines = null;
-    console.log(porcentageLines);
     
     entries.forEach(
         

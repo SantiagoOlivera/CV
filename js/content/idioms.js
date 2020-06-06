@@ -28,7 +28,11 @@ function setIdiomsItemsHTMLText(idioms){
                             <div class="idiom-item-container ${ element.level < 100 ? '.idiom-porcentage-left' : '' }">
 
                                 <div class="idiom-title">
-                                    <h1><span>${element.title}</span></h1>
+                                    <h1>
+                                        <span idTranslate="">
+                                            ${element.title}
+                                        </span>
+                                    </h1>
                                 </div>
 
                                 <div class="idiom-porcentage">
