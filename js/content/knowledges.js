@@ -25,7 +25,9 @@ function setKnowledgesItemsHTMLText(knowledges){
                     ${ programmingToolsHTMLText }
                     
                     <div class="porcentage-title">
-                        ${element.title}
+                        <span>
+                            ${element.title}
+                        </span>
                     </div>
 
                     <div class="porcentage-line" >
@@ -50,7 +52,9 @@ function setKnowledgesItemsHTMLText(knowledges){
                     
                     <div class="knowledge-item-title">
                         <h1>
-                            <span>${element.title}</span>
+                            <span idTranslate="${element.title[1]}">
+                                ${element.title[0]}
+                            </span>
                         </h1>
                     </div>
 

@@ -50,7 +50,11 @@ function setTimelineItemsHTMLText(timelineItems){
                         </div>
                         <br>
                         <div class="timeline-item-title">
-                            <h1>${element.title}</h1>
+                            <h1>
+                                <span idTranslate="${element.title[1]}">
+                                    ${element.title[0]}
+                                </span>
+                            </h1>
                         </div>
                         <br>
                         <div class="timeline-item-start">
@@ -92,12 +96,14 @@ function setTimelineItemsHTMLText(timelineItems){
                         </div>
                         <br>
                         <div class="timeline-item-description">
-                                ${ element.description }
+                                <span idTranslate="${ element.description[1] }">
+                                    ${ element.description[0] }
+                                </span>
                         </div>
                         <br>
                         <h4>
-                            <span idTranslate="">
-                                Herramientas de Programación utilizadas
+                            <span idTranslate="24">
+                                Lenguajes de Programación utilizados
                             </span>
                         </h4>
                         <div class="timeline-item-programing-languages">

@@ -36,8 +36,18 @@
 
 }
 
-@media (max-width: 340px){
+@media (max-width: 600px){
     .spacer-header{
-        height: 129px;
+        height: 115px;
     }
+    .idiom-selector{
+        max-width: 60px;
+    }
+    .idiom-text{
+        display: none;
+    }
+    .download-container-icon-text p{
+        display: none;
+    }
+    
 }

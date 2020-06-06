@@ -36,10 +36,10 @@ function loadObjects(){
         var workExperience = [ 
             new Work(
                 2015,
-                "Pasantia en CODES S.A.", 
+                ["Pasantia en CODES S.A.", 0], 
                 '09/01/2015',
                 '12/01/2015',
-                'Descripcion Prueba',
+                ['Descripcion Prueba',0],
                 [
                     new ProgrammingTool('ASP.Net'),
                     new ProgrammingTool('SQL Server'),
@@ -47,10 +47,10 @@ function loadObjects(){
             ), 
            new Work(
                 2016,
-                "CODES S.A.",
+                ["CODES S.A.",0],
                 '01/11/2016',
                 '07/01/2017',
-                'Descripcion Prueba',
+                ['Descripcion Prueba',0],
                 [
                     new ProgrammingTool('Drupal'),
                     new ProgrammingTool('MySQL'),
@@ -59,10 +59,10 @@ function loadObjects(){
             ),
             new Work(
                 2018,
-                "Sistemas Plenario S.A.", 
+                ["Sistemas Plenario S.A.",0], 
                 '06/16/2018',
                 '05/01/2019', 
-                'Descripcion Prueba',
+                ['Descripcion Prueba',0],
                 [
                     new ProgrammingTool('Visual Basic.Net'),
                     new ProgrammingTool('SQL Server'),
@@ -71,10 +71,10 @@ function loadObjects(){
             ),
             new Work(
                 2019,
-                "Istorming S.A.", 
+                ["Istorming S.A.",0], 
                 '05/02/2019', 
                 new Date(), /* actualidad */
-                'Descripcion Prueba',
+                ['Descripcion Prueba',0],
                 [
                     new ProgrammingTool('Meta4'),
                     new ProgrammingTool('Oracle SQL with Toad'),
@@ -95,9 +95,9 @@ function loadObjects(){
                 description,
                 programingTools 
             */
-                ['Técnico en Computación',0],
+                ['Técnico en Computación',26],
                 ['Secundario',0],
-                'Completado',
+                ['Completado',28],
                 '03/01/2010',
                 '12/01/2015',
                 ['Escuela Técnica Nro 35 Ing. Eduardo Latzina', 0],
@@ -122,8 +122,8 @@ function loadObjects(){
             ),
             new Study(
                     ['Webmaster',0],
-                    ['Curso',0],
-                    ['Completado',0],
+                    ['Curso',27],
+                    ['Completado',28],
                     '06/01/2019',
                     '08/01/2019',
                     'UTN',
@@ -148,8 +148,8 @@ function loadObjects(){
             ),
             new Study(
                     ['Web Avanzado', 0],
-                    ['Curso', 0 ],
-                    ['Completado', 0],
+                    ['Curso', 27],
+                    ['Completado', 28],
                     '09/01/2019',
                     '12/01/2019',
                     'UTN',
@@ -196,7 +196,7 @@ function loadObjects(){
         var knowledges = [
             
             new Knowledge(
-                'Frontend',
+                ['Frontend',0],
                 [
                     new ProgrammingTool(
                         'HTML',
@@ -214,7 +214,7 @@ function loadObjects(){
                 
             ),
             new Knowledge(
-                'Backend',
+                ['Backend', 0],
                 [
                     new ProgrammingTool(
                         'Visual Basic',
@@ -236,7 +236,7 @@ function loadObjects(){
                 
             ),
             new Knowledge(
-                'Data Base',
+                ['Data Base', 25],
                 [
                     new ProgrammingTool(
                         'SQL Server',

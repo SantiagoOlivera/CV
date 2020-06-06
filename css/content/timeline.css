@@ -24,7 +24,7 @@
     background-color: rgba(255, 204, 0, 0.7);
 }
 .timeline-items-container{
-    
+    text-align: center;
    /*  border: 5px solid black; */
     min-height: 500px;
     padding: 10px;

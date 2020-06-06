@@ -42,24 +42,24 @@ function setStudiesItemsHTMLText(studies){
                 <div class="study-container-item">                           
                     <div class="study-item-name">
                         <h1>
-                            <span>
-                                ${element.title}
+                            <span idTranslate="${element.title[1]}">
+                                ${element.title[0]}
                             </span>
                         </h1>
                     </div>
                     <br>
                     <div class="study-item-type">
                         <p>
-                            <span>
-                                ${element.type}
+                            <span idTranslate="${element.type[1]}">
+                                ${element.type[0]}
                             </span>
                         </p>
                     </div>
                     <br>
                     <div class="study-item-state">
                         <p>
-                            <span>
-                                ${element.state}
+                            <span idTranslate="${element.state[1]}">
+                                ${element.state[0]}
                             </span>
                         </p>
                     </div>

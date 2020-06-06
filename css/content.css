@@ -15,23 +15,22 @@
 }
 .content-item{
     margin: 40px;
-
     min-height: 200px;
     /* padding-top: 250px; */
 }
 .content-item h1{
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
 }
 .timeline h1{
-    font-size: 30px;
+    font-size: 25px;
 }
 .studies h1{
-    font-size: 30px;
+    font-size: 25px;
 }
 .knowledges h1{
-    font-size: 30px;
+    font-size: 25px;
 }
 .idioms h1{
-    font-size: 30px;
+    font-size: 25px;
 }

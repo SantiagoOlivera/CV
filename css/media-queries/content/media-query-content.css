@@ -3,9 +3,23 @@
     .content-item{
         margin: 0;
     }
-
     .line{
         left: 0;
+    }
+    .content-item h1{
+        font-size: 30px;
+    }
+    .timeline h1{
+        font-size: 20px;
+    }
+    .studies h1{
+        font-size: 20px;
+    }
+    .knowledges h1{
+        font-size: 20px;
+    }
+    .idioms h1{
+        font-size: 20px;
     }
     
 }

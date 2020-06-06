@@ -1,7 +1,7 @@
 .download{
     margin: 0 auto;
     width: 100%;
-    max-width: 150px;
+    max-width: 175px;
     height: 50px;
     
 }
@@ -12,8 +12,8 @@
     position: relative;
     display: none;
     width: 150px;
-    
 }
+
 .download:hover .download-hover-selector{
     display: block;
     cursor: pointer;
@@ -91,7 +91,7 @@
 .download-container-icon-text{
     margin: 0 auto;
     width: 100%;
-    max-width: 150px;
+    /* max-width: 150px; */
     display: flex;
     border: 1px solid lightgray;
     /* border-radius: 5px; */
@@ -99,6 +99,7 @@
     padding: 9px;
     text-align: center;
     height:45px;
+    /* border:1px solid black; */
 }
 .download-container-icon-text p{
     margin: 5px;

@@ -183,6 +183,30 @@ const translations = {
         'ENG':'Programming Languages used',
         'GER':'Verwendete Programmiersprachen'
     },
+    //Base de Datos
+    25:{
+        'ESP':'Base de Datos',
+        'ENG':'Data Base',
+        'GER':'Datenbank'
+    },
+    //Técnico en Computación
+    26:{
+        'ESP':'Técnico en Computación',
+        'ENG':'Information Technology Technician',
+        'GER':'Computertechniker'
+    },
+    //Curso
+    27:{
+        'ESP':'Curso',
+        'ENG':'Course',
+        'GER':'Course en ALeman'
+    },
+    //Completado
+    28:{
+        'ESP':'Completado',
+        'ENG':'Completed',
+        'GER':'Abgeschlossen'
+    },
     //Enero
     101: {
         'ESP':'Enero',
