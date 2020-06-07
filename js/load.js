@@ -10,6 +10,7 @@ function load(){
     setStudiesItemsHTMLText(data.objs.studies);
     setIdiomsItemsHTMLText(data.objs.idioms);
     setKnowledgesItemsHTMLText(data.objs.knowledges);
+    setMyBetterSkillsItemsHTMLText(data.objs.my_better_skills);
 
 
     //trastalate objects description and titles according selected idiom:
@@ -256,6 +257,21 @@ function loadObjects(){
 
         ];
 
+        var myBetterSkills = [
+            new Skill(
+                ['Desarrollo de Frontend',0],
+                ['Considero que desenvuelvo muy bien en el manejo, desarrollo frontend con HTML, CSS y javascript',0]
+            ),
+            new Skill(
+                ['Desarrollo de Frontend',0],
+                ['Considero que desenvuelvo muy bien en el manejo, desarrollo frontend con HTML, CSS y javascript',0]
+            ),
+            new Skill(
+                ['Desarrollo de Frontend',0],
+                ['Considero que desenvuelvo muy bien en el manejo, desarrollo frontend con HTML, CSS y javascript',0]
+            ),
+        ];
+
 
         data.objs = {
 
@@ -268,7 +284,9 @@ function loadObjects(){
             //idioms
             'idioms': idioms,
             //knowledges
-            'knowledges': knowledges
+            'knowledges': knowledges,
+            //myBetterSkills
+            'my_better_skills': myBetterSkills,
             
         }
             
