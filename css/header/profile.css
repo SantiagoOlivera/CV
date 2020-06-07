@@ -24,9 +24,9 @@
 .nav-item i{
     font-size: 45px;
 }
-.nav-item:hover i{
+/* .nav-item:hover i{
     color: rgba(0,0,0,0.5);
-}
+} */
 .profile-data{
     padding: 10px;
 }

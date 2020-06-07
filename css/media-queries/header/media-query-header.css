@@ -46,6 +46,12 @@
     .idiom-text{
         display: none;
     }
+    .download-container-icon-text{
+        max-width: 60px;
+    }
+    .download-container-icon-text i{
+        margin: 0 auto;
+    }
     .download-container-icon-text p{
         display: none;
     }
