@@ -3,6 +3,7 @@
 @import "content/studies.css";
 @import "content/idiom.css";
 @import "content/knowledges.css";
+@import "content/my-better-skills.css";
 
 .content{
     display: flex;
@@ -14,7 +15,7 @@
     height: auto;
 }
 .content-item{
-    margin: 40px;
+   /*  margin: 40px; */
     min-height: 200px;
     /* padding-top: 250px; */
 }
@@ -33,4 +34,8 @@
 }
 .idioms h1{
     font-size: 25px;
+}
+.my-better-skills h1{
+    font-size: 25px;
+    text-align: left;
 }

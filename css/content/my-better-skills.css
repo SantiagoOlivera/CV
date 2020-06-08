@@ -1,0 +1,45 @@
+#myBetterSkills{
+    padding: 20px;
+}
+.my-better-skills{
+    width: 100%;
+    max-width: 1500px;
+   /*  border: 1px solid black; */
+    padding: 10px;
+}
+.my-better-skills-container{
+    margin: 0 auto;
+    max-width: 600px;
+    /* border: 1px solid blue; */
+    padding: 10px;
+}
+.my-better-skills-item{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.my-better-skills-icon{
+    width: 20%;
+    height: 100px;
+    /* border: 1px solid red; */
+    text-align: left;
+}
+.my-better-skills-icon h1{
+    
+    text-align: center !important;
+    /* border: 1px solid black; */
+    border-radius: 60px;
+    width: 50px;
+    height: 50px;
+    margin:5px auto;
+    padding-top: 8px;
+    background-color: lightgray;
+}
+.my-better-skills-item-container{
+    padding: 10px;
+    width: 80%;
+    height: 100px;
+    /* border: 1px solid orange; */
+}
+.my-better-skills-title h1{
+    text-align: left;
+}
