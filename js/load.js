@@ -300,7 +300,7 @@ function loadObjects(){
 
 
 function setDefaultProperties(){
-    
-    openAndCloseNavContainer();
-
+    if(window.innerWidth<800){
+        openAndCloseNavContainer();
+    }
 }
