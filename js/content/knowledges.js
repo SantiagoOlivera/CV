@@ -1,6 +1,5 @@
 var knowledgeContainer = document.querySelector('.knowledge-container');
 
-
 var knowledgePorcentageCircle ="#FFCC00";
 
 function setKnowledgesItemsHTMLText(knowledges){
@@ -60,7 +59,9 @@ function setKnowledgesItemsHTMLText(knowledges){
 
                     <div class="knowledge-item-level">
                         <div class="knowledge-porcentage">
-                            <p>${Math.round(element.level)}%</p>
+                            <p>
+                                ${Math.round(element.level)}%
+                            </p>
                         </div>
 
                         <svg class="knowledge-porcentage-circle" width="80px" height="80px">
@@ -86,3 +87,5 @@ function setKnowledgesItemsHTMLText(knowledges){
     knowledgeContainer.innerHTML = knowledgesHTMLText;
 
 }
+
+

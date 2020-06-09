@@ -1,5 +1,8 @@
 function load(){
     
+    //default screen properties
+    setDefaultProperties(); 
+
     loadObjects();
     //console.log(data.objs);
 
@@ -12,6 +15,8 @@ function load(){
     setKnowledgesItemsHTMLText(data.objs.knowledges);
     setMyBetterSkillsItemsHTMLText(data.objs.my_better_skills);
 
+
+    
 
     //trastalate objects description and titles according selected idiom:
     //0-Spanish
@@ -290,5 +295,12 @@ function loadObjects(){
             
         }
             
+
+}
+
+
+function setDefaultProperties(){
+    
+    openAndCloseNavContainer();
 
 }

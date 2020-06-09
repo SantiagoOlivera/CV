@@ -76,7 +76,6 @@
 }
 
 .knowledge-porcentage-circle circle{
-   
    /*  width: 100%;
     max-width: 80px;
     height: 100%;
@@ -85,15 +84,14 @@
     stroke-width: 15;
     transform: translate(10px, 10px);
     border:1px solid black;
-    
     /*  
     width: 100%;
     height: 100%;
     fill:none;
     stroke-width: 15; 
    */
-    
 }
+
 .knowledge-porcentage{
     position: relative;
     top: 50px;
@@ -111,4 +109,35 @@
 .knowledge-porcentage-circle circle:nth-child(3){
     stroke:rgba(0,0,0,0.3); 
     stroke-dasharray: 3 4;
+}
+
+
+@keyframes counter{
+
+    /* 
+    
+        0% { margin-top: 0px; }
+        9% { margin-top: 0px; }
+        10% { margin-top: -20px; }
+        19% { margin-top: -20px; }
+        20% { margin-top: -40px; }
+        29% { margin-top: -40px; }
+        30% { margin-top: -60px; }
+        39% { margin-top: -60px; }
+        40% { margin-top: -80px; }
+        49% { margin-top: -80px; }
+        50% { margin-top: -100px; }
+        59% { margin-top: -100px; }
+        60% { margin-top: -120px; }
+        69% { margin-top: -120px; }
+        70% { margin-top: -140px; }
+        79% { margin-top: -140px; }
+        80% { margin-top: -160px; }
+        89% { margin-top: -160px; }
+        90% { margin-top: -180px; }
+        99% { margin-top: -180px; }
+        100% { margin-top: -200px; } 
+    
+    */
+
 }

@@ -25,7 +25,13 @@
 }
 .menu-item{
     display: flex;
+    border: 1px solid lightgray;
 }
+.menu-item:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
 .menu-item-icon{
     cursor:pointer;
 }

@@ -54,3 +54,36 @@ menuLinks.forEach(
         );
     }
 );
+
+
+var menuItems = document.querySelectorAll('.menu-item');
+
+menuItems.forEach(
+    element => {
+        element.addEventListener(
+            "click", 
+            (e) => { 
+                console.log(element.children[1].children[0].children[0].getAttribute('href'));
+                
+                
+                    if(hashSelected!==null && hashSelected === element.getAttribute("href")){
+                        e.preventDefault();
+                    }else{
+                        var contentItem = document.querySelector(element.children[1].children[0].children[0].getAttribute('href'));
+                        //console.log(contentItem);
+                        
+                        window.scrollTo({
+                            top:  contentItem.offsetTop - 250,
+                            behavior: 'smooth'
+                        });
+                        
+                        hashSelected = window.location.hash;
+                        if(window.innerWidth<800){
+                            openAndCloseNavContainer();
+                        }
+                    }
+                }
+            
+        );
+    }
+);

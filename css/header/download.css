@@ -5,7 +5,7 @@
     height: 50px;
     
 }
-#downloadSelectorButton{
+#downloadSelectorButton i{
     font-size: 30px;
 }
 .download-hover-selector{

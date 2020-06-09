@@ -22,6 +22,7 @@
         font-size: 20px;
     }
     
+    
 }
 @media (max-width: 620px){
     .study-item{
@@ -30,10 +31,13 @@
     .knowledge-item{
         margin: 0 auto;
     }
-    .timeline-item{
-        margin:0 auto !important;
-    }
+    
     .timeline-item-left{
         left:0 !important;
+    }
+}
+@media (max-width:800px){
+    .timeline-item{
+        margin:0 auto !important;
     }
 }
