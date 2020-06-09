@@ -63,7 +63,7 @@ menuItems.forEach(
         element.addEventListener(
             "click", 
             (e) => { 
-                console.log(element.children[1].children[0].children[0].getAttribute('href'));
+                //console.log(element.children[1].children[0].children[0].getAttribute('href'));
                 
                 
                     if(hashSelected!==null && hashSelected === element.getAttribute("href")){
