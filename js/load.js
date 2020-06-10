@@ -44,8 +44,8 @@ function loadObjects(){
             new Work(
                 2015,
                 ["Pasantia en CODES S.A.", 0], 
-                '09/01/2015',
-                '12/01/2015',
+                new Date('09/01/2015'),
+                new Date('12/01/2015'),
                 ['Descripcion Prueba',0],
                 [
                     new ProgrammingTool('ASP.Net'),
@@ -55,8 +55,8 @@ function loadObjects(){
            new Work(
                 2016,
                 ["CODES S.A.",0],
-                '01/11/2016',
-                '07/01/2017',
+                new Date('01/11/2016'),
+                new Date('07/01/2017'),
                 ['Descripcion Prueba',0],
                 [
                     new ProgrammingTool('Drupal'),
@@ -67,8 +67,8 @@ function loadObjects(){
             new Work(
                 2018,
                 ["Sistemas Plenario S.A.",0], 
-                '06/16/2018',
-                '05/01/2019', 
+                new Date('06/16/2018'),
+                new Date('05/01/2019'), 
                 ['Descripcion Prueba',0],
                 [
                     new ProgrammingTool('Visual Basic.Net'),
@@ -79,7 +79,7 @@ function loadObjects(){
             new Work(
                 2019,
                 ["Istorming S.A.",0], 
-                '05/02/2019', 
+                new Date('05/02/2019'), 
                 new Date(), /* actualidad */
                 ['Descripcion Prueba',0],
                 [
