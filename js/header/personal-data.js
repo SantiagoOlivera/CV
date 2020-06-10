@@ -3,7 +3,7 @@ function getPersonalData(person){
     var age = person.getAge();
     //console.log(age);
     document.querySelector('#age').textContent =  age;
-    document.querySelector('#name').textContent=  `${person.name} ${person.lastname} `
+    document.querySelector('#name').innerHTML =  'Santiago Ariel Olivera';
 }
 
 
