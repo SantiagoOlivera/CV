@@ -1,7 +1,7 @@
 class GenericFunction{
 
-    constructor(){
-        
+    /* constructor(){
+
     }
 
     monthsNames = {
@@ -48,7 +48,7 @@ class GenericFunction{
             11: 'November',
             12: 'Dezember',
         } 
-    }
+    } */
 
     dateDiff(startDate, endDate){
         //this function returns a JSON with diference time beetween startDate and endDate
