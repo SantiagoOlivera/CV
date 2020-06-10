@@ -64,7 +64,7 @@
 }
 
 .timeline-item-container:nth-child(even) .timeline-item{
-    left: 55%;
+    /* left: 55%; */
     /* animation: slide_right 0.5s forwards; */
     
 }
