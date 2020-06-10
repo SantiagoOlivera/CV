@@ -1,6 +1,9 @@
 class GenericFunction{
 
-    
+    constructor(){
+        
+    }
+
     monthsNames = {
 
         spanish: {
