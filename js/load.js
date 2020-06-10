@@ -105,8 +105,8 @@ function loadObjects(){
                 ['Técnico en Computación',26],
                 ['Secundario',0],
                 ['Completado',28],
-                '03/01/2010',
-                '12/01/2015',
+                new Date('03/01/2010'),
+                new Date('12/01/2015'),
                 ['Escuela Técnica Nro 35 Ing. Eduardo Latzina', 0],
                 ['Descripcion de Prueba', 0],
                 [
@@ -131,8 +131,8 @@ function loadObjects(){
                     ['Webmaster',0],
                     ['Curso',27],
                     ['Completado',28],
-                    '06/01/2019',
-                    '08/01/2019',
+                    new Date('06/01/2019'),
+                    new Date('08/01/2019'),
                     'UTN',
                     ['Curso de HTML5, CSS3, Javascript, MySQL y PHP', 0],
                     [
@@ -157,8 +157,8 @@ function loadObjects(){
                     ['Web Avanzado', 0],
                     ['Curso', 27],
                     ['Completado', 28],
-                    '09/01/2019',
-                    '12/01/2019',
+                    new Date('09/01/2019'),
+                    new Date('12/01/2019'),
                     'UTN',
                     ['Curso de Node.JS, Express, MongoDB, Angular y React. Manejo de ', 0],
                     [   
