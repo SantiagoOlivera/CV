@@ -36,9 +36,9 @@ function loadObjects(){
         var person = new Person(
             'Santiago',
             'Olivera',
-            '10/25/1996'
+            new Date('10/25/1996')
         );
-        alert(new Date('10/25/1996'));
+
         
         var workExperience = [ 
             new Work(
