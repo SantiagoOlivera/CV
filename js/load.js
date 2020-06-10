@@ -9,11 +9,11 @@ function load(){
     getPersonalData(data.objs.person);
     
     //load html data
-    setTimelineItemsHTMLText(data.objs.work_experience);
-    setStudiesItemsHTMLText(data.objs.studies);
-    setIdiomsItemsHTMLText(data.objs.idioms);
-    setKnowledgesItemsHTMLText(data.objs.knowledges);
-    setMyBetterSkillsItemsHTMLText(data.objs.my_better_skills);
+    //setTimelineItemsHTMLText(data.objs.work_experience);
+    //setStudiesItemsHTMLText(data.objs.studies);
+    //setIdiomsItemsHTMLText(data.objs.idioms);
+    //setKnowledgesItemsHTMLText(data.objs.knowledges);
+    //setMyBetterSkillsItemsHTMLText(data.objs.my_better_skills);
 
 
     
