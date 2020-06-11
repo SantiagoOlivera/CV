@@ -43,7 +43,7 @@
     .idiom-selector{
         max-width: 60px;
     }
-    .idiom-text{
+    .nav-item .idiom-text{
         display: none;
     }
     .download-container-icon-text{
