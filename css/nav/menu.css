@@ -8,6 +8,7 @@
 .menu-container{
     position: fixed; 
     width: 30%;
+    max-width: 450px;
     height:550px;
     transition: ease 0.5s;
     /* border: 3px solid blue; */
