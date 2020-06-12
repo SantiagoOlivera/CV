@@ -103,7 +103,7 @@ function loadObjects(){
                 programingTools 
             */
                 ['Técnico en Computación',26],
-                ['Secundario',0],
+                ['Escuela Secundaria',29],
                 ['Completado',28],
                 new Date('03/01/2010'),
                 new Date('12/01/2015'),
@@ -129,7 +129,7 @@ function loadObjects(){
             ),
             new Study(
                     ['Webmaster',0],
-                    ['Curso',27],
+                    ['Curso de Programación',27],
                     ['Completado',28],
                     new Date('06/01/2019'),
                     new Date('08/01/2019'),
@@ -155,7 +155,7 @@ function loadObjects(){
             ),
             new Study(
                     ['Web Avanzado', 0],
-                    ['Curso', 27],
+                    ['Curso de Programación', 27],
                     ['Completado', 28],
                     new Date('09/01/2019'),
                     new Date('12/01/2019'),

@@ -195,17 +195,22 @@ const translations = {
         'ENG':'Information Technology Technician',
         'GER':'Computertechniker'
     },
-    //Curso
+    //Curso de Programación
     27:{
-        'ESP':'Curso',
-        'ENG':'Course',
-        'GER':'Course en ALeman'
+        'ESP':'Curso de Programación',
+        'ENG':'Course of Programming',
+        'GER':'Programmierkurs'
     },
     //Completado
     28:{
         'ESP':'Completado',
         'ENG':'Completed',
         'GER':'Abgeschlossen'
+    },
+    29:{
+        'ESP':'Escuela Secundaria',
+        'ENG':'High School',
+        'GER':'Weiterführende Schule'
     },
     //Enero
     101: {
