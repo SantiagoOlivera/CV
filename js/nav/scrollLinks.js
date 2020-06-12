@@ -26,7 +26,7 @@ window.addEventListener(
         //console.log(contentItem);
         
         window.scrollTo({
-            top:  contentItem.offsetTop - 250,
+            top:  window.innerWidth > 800 ? contentItem.offsetTop - 250 : contentItem.offsetTop - 130,
             behavior: 'smooth'
         });
 
@@ -73,7 +73,7 @@ menuItems.forEach(
                         //console.log(contentItem);
                         
                         window.scrollTo({
-                            top:  contentItem.offsetTop - 250,
+                            top:  window.innerWidth > 800 ? contentItem.offsetTop - 250 : contentItem.offsetTop - 130,
                             behavior: 'smooth'
                         });
                         
