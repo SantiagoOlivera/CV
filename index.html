@@ -85,12 +85,15 @@
     <div id="personalData">
 
         <div class="personal-data">
+            <div class="personal-data-close">
+                <i id="closePersonalData" class="material-icons">close</i>
+            </div>
             <div class="personal-data-container">
+
                 <div class="personal-data-photo">
-                    <img id="personalDataImage" src="img/profile/profile-photo.jpg" alt="profile-photo" style=" filter: grayscale(90%); border-radius: 90px;">
+                    <img src="img/profile/profile-photo.jpg" alt="profile-photo" style=" filter: grayscale(90%); border-radius: 90px;">
                 </div>
                 <div class="personal-data-info">
-                    <div class="profile-information">
                         <ul class="profile-information-list">
                             <li>
                                 <span idTranslate="1" >
@@ -106,10 +109,8 @@
                                     Edad 
                                 </span>
                                 :
-                                <span></span>
-                                <span id="age">
-                                    
-                                </span>
+                                <span id="ageWindow"></span>
+                                
                                 <span idTranslate="3"> años</span>
                             </li>
                             <li>
@@ -128,7 +129,7 @@
                                 </span>
                             </li>
                         </ul>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -144,7 +145,7 @@
                 <div class="profile-container">
 
                     <div class="profile-photo">
-                        <img src="img/profile/profile-photo.jpg" alt="profile-photo" style=" filter: grayscale(90%); border-radius: 90px;">
+                        <img id="personalDataImage" src="img/profile/profile-photo.jpg" alt="profile-photo" style=" filter: grayscale(90%); border-radius: 90px;">
                     </div>
                     <div class="profile-data">
                         <div class="profile-title">
