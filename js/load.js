@@ -6,7 +6,7 @@ function load(){
     loadObjects();
     //console.log(data.objs);
 
-    getPersonalData(data.objs.person);
+    setPersonalDataHTMLText(data.objs.person);
     
     //load html data
     setTimelineItemsHTMLText(data.objs.work_experience);
@@ -15,8 +15,6 @@ function load(){
     setKnowledgesItemsHTMLText(data.objs.knowledges);
     setMyBetterSkillsItemsHTMLText(data.objs.my_better_skills);
 
-
-    
 
     //trastalate objects description and titles according selected idiom:
     //0-Spanish
@@ -37,7 +35,9 @@ function loadObjects(){
             'Santiago',
             'Ariel',
             'Olivera',
-            new Date('10/25/1996')
+            new Date('10/25/1996'),
+            'olivera.santiagoariel@gmail.com',
+            'Argentina'
         );
 
         

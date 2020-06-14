@@ -1,10 +1,58 @@
-function getPersonalData(person){
+function setPersonalDataHTMLText(person){
     //object person
-    var age = person.getAge();
-    //console.log(age);
-    document.querySelector('#age').textContent =  age;
-    document.querySelector('#ageWindow').textContent =  age;
-    document.querySelector('#name').textContent = `${person.name} ${person.secondName} ${person.lastname}` ;
+    
+    personalDataHTMLText = '';
+    
+    var personalDataFullScreen = document.querySelector('#personalDataFullScreen');
+    var personalDataPhone = document.querySelector('#personalDataPhone');
+    var name = document.querySelector('#name');
+
+    personalDataHTMLText = `
+        <ul class="profile-information-list">
+            <li>
+                <span idTranslate="1" >
+                    Fecha de nacimiento
+                </span>
+                :
+                ${person.birthdate.getDate()}
+                <span idTranslate="${new GenericFunction().getMonthName(person.birthdate.getMonth()+1).idTranslate}">
+                    ${ new GenericFunction().getMonthName(person.birthdate.getMonth()+1).name}
+                </span>
+                ${person.birthdate.getFullYear() }
+            </li>
+            <li>
+                <span idTranslate="2">
+                    Edad 
+                </span>
+                :
+                <span></span>
+                <span id="age">
+                    ${person.getAge()}
+                </span>
+                <span idTranslate="3"> años</span>
+            </li>
+            <li>
+                Email: 
+                <a href="mailto:${person.email}">
+                    ${person.email}
+                </a>
+            </li>
+            <li>
+                <span idTranslate="4">
+                    Nacionalidad
+                </span>
+                :
+                <span  idTranslate="5">
+                   ${person.nationality}
+                </span>
+            </li>
+        </ul>
+    `;
+   
+    personalDataFullScreen.innerHTML = personalDataHTMLText;
+    personalDataPhone.innerHTML = personalDataHTMLText;
+    name.textContent =  `${person.name} ${person.secondName} ${person.lastname}`;
+    
 }
 
 

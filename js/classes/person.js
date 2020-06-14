@@ -4,18 +4,22 @@ class Person{
         name,
         secondName,
         lastname, 
-        birthday
+        birthdate,
+        email,
+        nationality
     ){
         this.name = name;
         this.secondName = secondName;
         this.lastname = lastname;
-        this.birthday = birthday;
+        this.birthdate = birthdate;
+        this.email = email;
+        this.nationality = nationality;
     }
 
     //get age person
     getAge(){
         var today = new Date();
-        var birthDate = new Date(this.birthday);
+        var birthDate = new Date(this.birthdate);
         
         if( (today.getDate() >= birthDate.getDate()) && (today.getMonth() >= birthDate.getMonth()) ){
             var age = today.getFullYear() - birthDate.getFullYear(); 
