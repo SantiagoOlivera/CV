@@ -1,5 +1,6 @@
 #myBetterSkills{
-    padding: 20px;
+    width: 100%;
+    /* border: 1px solid black; */
 }
 .my-better-skills{
     width: 100%;
@@ -18,10 +19,11 @@
     flex-wrap: nowrap;
 }
 .my-better-skills-icon{
-    width: 20%;
-    height: 100px;
+    width: 100%;
+    max-width: 20%;
     /* border: 1px solid red; */
     text-align: left;
+    margin: 0 auto;
 }
 .my-better-skills-icon h1{
     
@@ -35,9 +37,12 @@
     background-color: lightgray;
 }
 .my-better-skills-item-container{
-    padding: 10px;
-    width: 80%;
+    
+    /* padding: 10px; */
+    width: 100%;
+    max-width: 80%;
     /* border: 1px solid orange; */
+    margin:0 auto;
 }
 .my-better-skills-title h1{
     text-align: left;
