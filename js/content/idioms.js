@@ -36,7 +36,11 @@ function setIdiomsItemsHTMLText(idioms){
                                 </div>
 
                                 <div class="idiom-porcentage">
-                                    <h1>${element.level}%</h1>
+                                    <h1>
+                                        <span>
+                                            ${element.level}
+                                        </span>%
+                                    </h1>
                                 </div>
 
                                 <div class="idiom-circle">

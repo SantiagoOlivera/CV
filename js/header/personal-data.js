@@ -4,7 +4,7 @@ function getPersonalData(person){
     //console.log(age);
     document.querySelector('#age').textContent =  age;
     document.querySelector('#ageWindow').textContent =  age;
-    document.querySelector('#name').textContent = `${person.name} ${person.lastname}` ;
+    document.querySelector('#name').textContent = `${person.name} ${person.secondName} ${person.lastname}` ;
 }
 
 
@@ -17,7 +17,9 @@ console.log(personalDataButton); */
 
 personalDataButton.addEventListener(
     'click', () => {
-        openAndClosePersonalDataWindow();
+        if(window.innerWidth<700){
+            openAndClosePersonalDataWindow();
+        }
     }
 );
 closePersonalDataButton.addEventListener(

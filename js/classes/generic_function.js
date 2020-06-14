@@ -76,6 +76,47 @@ class GenericFunction{
         return prom;
     }
 
+    counter(element, start, end, duration) {
+            
+            
+            var range = end - start;
+            var current = start;
+            var increment = end > start? 1 : -1;
+            var stepTime = Math.abs(Math.floor(duration / range));
+            //var obj = document.getElementById(id);
+            var obj = element;
+            var timer = setInterval(function() {
+                current += increment;
+                obj.innerHTML = current;
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+    
+        //Counter Effect
+        //let obj = document.querySelector(element);
+        /* var current = 0;
+        var range = end;
+        var increment = 1;
+        var element = 0;
+
+        step = Math.ainbs(Math.floor(duration / range));
+
+        timer = setInterval(() => {
+            current += increment;
+            //element.textContent = current;
+            element = current;
+            if (current == end) {
+             clearInterval(timer);
+            }
+        }, step);
+
+        console.log(element);
+
+    } */
+
 
 }
 

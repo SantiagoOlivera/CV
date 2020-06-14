@@ -1,6 +1,6 @@
 //scroll observer idioms
 var  idioms = document.querySelector('#idioms');
-var  idiomItems = document.querySelectorAll('.procentage-circle');
+var  idiomItems = document.querySelectorAll('.idiom-card');
 
 
 var  observerIdiomCircles = new IntersectionObserver(
@@ -12,22 +12,39 @@ function loadIdiomsPorcentageCircles(entries, observerIdiomCircles){
 
     for (entry of entries) {
         
-        //console.log(entry);
+        
 
         if (entry.isIntersecting) {
             
             cont = 0;
 
+
+
             idiomItems.forEach(
                 element => {
+
+                    var porcentage = element.children[0].children[0].children[1].children[0].children[0].textContent;
+                    var circle = element.children[0].children[0].children[2].children[0].children[1];
                     
                     //data.objs.idioms[cont];
                     //level
                     // console.log(data.objs.idioms[cont].level);
                     // circle svg
                     //console.log(element.children[1]);
-                    element.children[1].style.strokeDashoffset = `${( 880 - ( ( 440 *  Math.round(data.objs.idioms[cont].level) ) / 100 ) )}`;
-                    cont++; 
+
+                    new GenericFunction().counter(
+                        element.children[0].children[0].children[1].children[0].children[0],
+                        0,
+                        element.children[0].children[0].children[1].children[0].children[0].textContent,
+                        1500
+                    );
+
+                    
+
+                    
+                    circle.style.strokeDashoffset = `${( 880 - ( ( 440 *  Math.round(porcentage) ) / 100 ) )}`;
+
+
                 }
                     
             );
@@ -53,6 +70,7 @@ var observerKnowledgeCircle = new IntersectionObserver(
 
 function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
 
+    
     var porcentageLines = null;
     
     entries.forEach(
@@ -60,7 +78,7 @@ function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
         entry => {
 
 
-            //console.log(entry);
+            
             
             if (entry.isIntersecting) {
 
@@ -74,6 +92,15 @@ function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
                    ( 880 - ( ( 190 * Math.round(data.objs.knowledges[knowledgesIndex].level) ) / 100 ) ) 
                 } `;
                
+                //console.log(entry.target.children[0].children[1].children[0].children[0].children[0].textContent);
+
+                //Efecto Counter
+                new GenericFunction().counter(
+                    entry.target.children[0].children[1].children[0].children[0].children[0],
+                    0,
+                    entry.target.children[0].children[1].children[0].children[0].children[0].textContent,
+                    2000
+                );
 
                /* porcentageLines = document.querySelectorAll(
                    ' .knowledge-container > :nth-child(' +  knowledgesIndex+1  + ')'+
@@ -86,17 +113,29 @@ function loadKnowledgesPorcentageCircles(entries, observerKnowledgeCircle){
 
                //console.log(porcentageLines);
                
+               
                var i = 0;
                porcentageLines.forEach(
                    element => {
                        if (element.classList[0]==="porcentage-line"){
+
+                            //Efecto Counter
+                            new GenericFunction().counter(
+                                element.children[0].children[0],
+                                0,
+                                //numero hasta el detiene que es el impreso en knowledges
+                                element.children[0].children[0].textContent,
+                                700
+                            );
+        
+                            //console.log(element.children[0].children[0].textContent);
                             element.children[1].style.width = `${ data.objs.knowledges[knowledgesIndex].programingTools[i].level }%`;
                             i++;
                        }
                    }
                );
                    
-                
+               observerKnowledgeCircle.unobserve(entry.target);
             }
         }
     );
@@ -127,8 +166,6 @@ function slideTimelineItem(entries,observerSlideTimelineItem){
     entries.forEach(
         entry => {
 
-            
-
             if(entry.isIntersecting){
                 //console.log(entry);
                 timelineItem = entry.target;
@@ -138,6 +175,8 @@ function slideTimelineItem(entries,observerSlideTimelineItem){
                 }else{
                     timelineItem.classList.add('timeline-item-even-animation');
                 }
+
+
             }
         }
     );

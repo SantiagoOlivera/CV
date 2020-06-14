@@ -31,7 +31,7 @@ function setKnowledgesItemsHTMLText(knowledges){
 
                     <div class="porcentage-line" >
                         <div class="porcentage-loading-number">
-                            ${element.level}%
+                            <span>${element.level}</span>%
                         </div>
                         <div class="porcentage-line-loading">
                         </div>
@@ -60,7 +60,7 @@ function setKnowledgesItemsHTMLText(knowledges){
                     <div class="knowledge-item-level">
                         <div class="knowledge-porcentage">
                             <p>
-                                ${Math.round(element.level)}%
+                               <span>${Math.round(element.level)}</span>%
                             </p>
                         </div>
 

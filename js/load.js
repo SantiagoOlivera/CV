@@ -35,6 +35,7 @@ function loadObjects(){
         
         var person = new Person(
             'Santiago',
+            'Ariel',
             'Olivera',
             new Date('10/25/1996')
         );
