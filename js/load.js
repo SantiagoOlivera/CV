@@ -267,15 +267,19 @@ function loadObjects(){
         var myBetterSkills = [
             new Skill(
                 ['Desarrollo de Frontend',0],
-                ['Considero que desenvuelvo muy bien en el manejo, desarrollo frontend con HTML, CSS y javascript',0]
+                ['Considero que desenvuelvo muy bien en el manejo, desarrollo frontend con HTML, CSS y Javascript',0]
             ),
             new Skill(
-                ['Desarrollo de Frontend',0],
-                ['Considero que desenvuelvo muy bien en el manejo, desarrollo frontend con HTML, CSS y javascript',0]
+                ['Manejo de Consultas SQL',0],
+                ['Considero que tengo gran habilidad para crear y analizar consultas SQL',0]
             ),
             new Skill(
-                ['Desarrollo de Frontend',0],
-                ['Considero que desenvuelvo muy bien en el manejo, desarrollo frontend con HTML, CSS y javascript',0]
+                ['Análisis de código y funcionamiento',0],
+                ['Me desenvuelvo muy bien analizando código y analizando su funcionamiento',0]
+            ),
+            new Skill(
+                ['Desarrollo de Reportes',0],
+                ['Una de las tareas más frecuentes que he tenido en mis diferentes trabajos es el desarrollo de reportes digitales con herrmientas como Crystal Reports, DevExpress y la herramienta de desarrollo de reportes de Meta4',0]
             ),
         ];
 

@@ -48,6 +48,8 @@ function loadIdiomsPorcentageCircles(entries, observerIdiomCircles){
                 }
                     
             );
+
+            observerIdiomCircles.unobserve(entry.target);
         }
     }
 }
