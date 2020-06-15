@@ -8,16 +8,22 @@
 
     
 
-    <meta name="profile-photo" property="og:image" content="">
-    <meta name="name" property="og:title" content="">
+    <!-- <meta name="profile-photo" property="og:image" content="">
+    <meta name="name" property="og:title" content=""> -->
     <meta name="description" property="og:description" content="Curriculum Vitae Online">
 
 
     <!-- modify dinamicly meta tags -->
     <script type="text/javascript">
 
-        document.querySelector('meta[name="profile-photo"]').setAttribute('content','img/profile/profile-photo.jpg');
-        document.querySelector('meta[name="name"]').setAttribute('content',`Santiago Olivera`);
+        var meta = document.createElement('meta');
+        meta.setAttribute('name', 'profile-photo');
+        meta.setAttribute('property', 'og:image');
+        meta.setAttribute('content', 'img/profile/profile-photo.jpg' );
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+        //document.querySelector('meta[name="profile-photo"]').setAttribute('content','img/profile/profile-photo.jpg');
+        //document.querySelector('meta[name="name"]').setAttribute('content',`Santiago Olivera`);
 
 
         //document.querySelector('meta[name="profile-photo"]').setAttribute('content',person.img);
