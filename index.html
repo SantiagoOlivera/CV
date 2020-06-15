@@ -5,9 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta name='apple-mobile-web-app-capable' content='yes' />
 
+
+    
+
     <meta name="profile-photo" property="og:image" content="">
     <meta name="name" property="og:title" content="">
     <meta name="description" property="og:description" content="Curriculum Vitae Online">
+
+
+    <!-- modify dinamicly meta tags -->
+    <script type="text/javascript">
+
+        document.querySelector('meta[name="profile-photo"]').setAttribute('content','img/profile/profile-photo.jpg');
+        document.querySelector('meta[name="name"]').setAttribute('content',`Santiago Olivera`);
+
+
+        //document.querySelector('meta[name="profile-photo"]').setAttribute('content',person.img);
+        //document.querySelector('meta[name="name"]').setAttribute('content',`${person.name} ${person.secondName} ${person.lastname}`);
+
+
+    </script>
 
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
