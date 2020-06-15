@@ -6,7 +6,8 @@ class Person{
         lastname, 
         birthdate,
         email,
-        nationality
+        nationality,
+        img
     ){
         this.name = name;
         this.secondName = secondName;
@@ -14,6 +15,7 @@ class Person{
         this.birthdate = birthdate;
         this.email = email;
         this.nationality = nationality;
+        this.img = img;
     }
 
     //get age person

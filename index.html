@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta name='apple-mobile-web-app-capable' content='yes' />
 
-    <meta property="og:image" content="img/profile/profile-photo.jpg">
-    <meta property="og:title" content="Santiago Olivera">
-    <meta property="og:description" content="Curriculum Vitae Online">
+    <meta name="profile-photo" property="og:image" content="">
+    <meta name="name" property="og:title" content="">
+    <meta name="description" property="og:description" content="Curriculum Vitae Online">
 
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="index.css">
@@ -68,13 +69,13 @@
             <div class="download-close">
                 <i id="downloadCloseButton" class="material-icons">close</i>
             </div>
-            <div class="download-item">
+            <div id="#DownloadPDFPhone" class="download-item">
                 <div class="download-item-title">
                     <h1>PDF</h1>
                 </div>
             </div>
             <div class="download-item">
-                <div class="download-item-title">
+                <div id="DownloadWordPhone" class="download-item-title">
                     <h1>Word</h1>
 
                 </div>
@@ -145,7 +146,7 @@
                 <div class="profile-container">
 
                     <div class="profile-photo">
-                        <img id="personalDataImage" src="img/profile/profile-photo.jpg" alt="profile-photo" style=" filter: grayscale(90%); border-radius: 90px;">
+                        <img id="personalDataImage" alt="profile-photo" style=" filter: grayscale(90%); border-radius: 90px;">
                     </div>
                     <div class="profile-data">
                         <div class="profile-title">
@@ -217,10 +218,10 @@
                                     </div>
                                 </div>
                                 <div class="download-options">
-                                    <div class="download-option">
+                                    <div id="DownloadPDF" class="download-option" >
                                         PDF
                                     </div>
-                                    <div class="download-option">
+                                    <div id="DownloadWord" class="download-option">
                                         Word
                                     </div>
                                 </div>
@@ -915,6 +916,10 @@
          <!-- load observers when all content is loaded -->
          <script src="js/content/observers/timeline.js"></script>
          <script src="js/content/observers/scrollObserverItems.js"></script>
+
+
+         <!-- Generate PDF -->
+         <script src="/js/generatePDF.js"></script>
     
 </body>
 </html>

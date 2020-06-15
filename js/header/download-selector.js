@@ -30,3 +30,27 @@ downloadItems.forEach(
         );
     }
 );
+
+var downloadPDF = document.querySelector('#DownloadPDF');
+var downloadWord = document.querySelector('#DownloadPDF');
+
+
+downloadPDF.addEventListener(
+    "click",
+    () => {
+        downloadFile();
+    }
+);
+
+
+function downloadFile(){
+    generatePDF(
+        data.objs.person,
+        data.objs.work_experience,
+        data.objs.studies,
+        data.objs.idioms,
+        data.objs.knowledges,
+        data.objs.my_better_skills
+    );
+}
+

@@ -6,6 +6,9 @@ function setPersonalDataHTMLText(person){
     var personalDataFullScreen = document.querySelector('#personalDataFullScreen');
     var personalDataPhone = document.querySelector('#personalDataPhone');
     var name = document.querySelector('#name');
+    document.querySelector('#personalDataImage').setAttribute('src', person.img);
+    document.querySelector('meta[name="profile-photo"]').setAttribute('content',person.img);
+    document.querySelector('meta[name="name"]').setAttribute('content',`${person.name} ${person.secondName} ${person.lastname}`);
 
     personalDataHTMLText = `
         <ul class="profile-information-list">

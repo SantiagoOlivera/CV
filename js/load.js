@@ -37,7 +37,8 @@ function loadObjects(){
             'Olivera',
             new Date('10/25/1996'),
             'olivera.santiagoariel@gmail.com',
-            'Argentina'
+            'Argentina',
+            '/img/profile/profile-photo.jpg'
         );
 
         
