@@ -46,8 +46,8 @@ function setPersonalDataHTMLText(person){
                     Nacionalidad
                 </span>
                 :
-                <span  idTranslate="5">
-                   ${person.nationality}
+                <span  idTranslate="${person.nationality[1]}">
+                   ${person.nationality[0]}
                 </span>
             </li>
         </ul>
