@@ -57,6 +57,39 @@ function generatePDF(
     //-------------------------------------------Work Experience-------------------------------------------
         pdf.setFontSize(20);
         pdf.text(20,75, `${getWordTranslatedToPDF(10)}`);
+        
+
+        pdf.setFontSize(15);
+
+        var cont1 = 0;
+        //Espacios entre Items
+        var SPACE1 = 0;
+        var SPACE2 = 0;
+
+        work_experience.forEach(
+            element => {
+
+                pdf.setFontSize(15);
+                
+                //HEIGHT SPACES BETWEEN TEXT
+                SPACE1 = 85 + (cont1*30);
+                SPACE2 = 5  + SPACE1;
+
+                pdf.text(
+                    20,
+                    SPACE1,
+                    `${element.year}`
+                );
+                pdf.setFontSize(10);
+                pdf.text(
+                    20,
+                    SPACE2,
+                    `${element.title[0]}`
+                );
+
+                cont1++;
+            }
+        ); 
 
 
 
