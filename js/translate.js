@@ -212,6 +212,12 @@ const translations = {
         'ENG':'High School',
         'GER':'Weiterführende Schule'
     },
+    //Tareas
+    30:{
+        'ESP':'Tareas',
+        'ENG':'Tasks',
+        'GER':'Aufgaben'
+    },
     //Enero
     101: {
         'ESP':'Enero',

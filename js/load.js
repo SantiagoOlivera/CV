@@ -48,7 +48,7 @@ function loadObjects(){
                 ["Pasantia en CODES S.A.", 0], 
                 new Date('09/01/2015'),
                 new Date('12/01/2015'),
-                ['Descripcion Prueba',0],
+                ['Pasantía en la Empresa CODES S.A. realizada durante el ultimo año de la escuela secundaria',0],
                 [
                     new ProgrammingTool('ASP.Net'),
                     new ProgrammingTool('SQL Server'),
@@ -59,7 +59,7 @@ function loadObjects(){
                 ["CODES S.A.",0],
                 new Date('01/11/2016'),
                 new Date('07/01/2017'),
-                ['Descripcion Prueba',0],
+                ['Programación web con el CMS Drupal y PHP. Manejo de consultas en Base de Datos MySQL',0],
                 [
                     new ProgrammingTool('Drupal'),
                     new ProgrammingTool('MySQL'),
@@ -71,11 +71,11 @@ function loadObjects(){
                 ["Sistemas Plenario S.A.",0], 
                 new Date('06/16/2018'),
                 new Date('05/01/2019'), 
-                ['Descripcion Prueba',0],
+                ['Programación de aplicaciones de escritorio y web de sistemas de administración contable con Visual Basic y C# con el framework .Net. Manejo de consultas Base de Datos SQL Server. Desarrollo de reportes utilizando DevExpress y Crystal Reports',0],
                 [
-                    new ProgrammingTool('Visual Basic.Net'),
-                    new ProgrammingTool('SQL Server'),
+                    new ProgrammingTool('Visual Basic'),
                     new ProgrammingTool('C#'),
+                    new ProgrammingTool('SQL Server'),
                 ] 
             ),
             new Work(
@@ -83,7 +83,7 @@ function loadObjects(){
                 ["Istorming S.A.",0], 
                 new Date('05/02/2019'), 
                 new Date(), /* actualidad */
-                ['Descripcion Prueba',0],
+                ['Programación en Meta4. Manejo de Base de Datos Oracle SQL. Programación de integraciones API REST con Java. Desarrollo de reportes con Meta4',0],
                 [
                     new ProgrammingTool('Meta4'),
                     new ProgrammingTool('Oracle SQL with Toad'),
@@ -110,7 +110,7 @@ function loadObjects(){
                 new Date('03/01/2010'),
                 new Date('12/01/2015'),
                 ['Escuela Técnica Nro 35 Ing. Eduardo Latzina', 0],
-                ['Descripcion de Prueba', 0],
+                ['Titulo de Técnico en Computación. Durante este periodo tuve mis primeras introducciones a los conocimientos en programación programando con C, C++, Visual Basic.6, y Java. Adquirí conocimientos en programación secuencial, eventos y Programación orientada a objetos(POO). Manejo de consultas de Bases de Datos MySQL creacion edicion eliminación de Cursores, Stored Procedures y Triggers', 0],
                 [
                     new ProgrammingTool(
                         'C',
@@ -162,7 +162,7 @@ function loadObjects(){
                     new Date('09/01/2019'),
                     new Date('12/01/2019'),
                     'UTN',
-                    ['Curso de Node.JS, Express, MongoDB, Angular y React. Manejo de ', 0],
+                    ['Curso de Node.JS, Express, MongoDB, Angular y React', 0],
                     [   
                         new ProgrammingTool(
                             'Javascript'

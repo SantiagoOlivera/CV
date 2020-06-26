@@ -32,10 +32,17 @@ downloadItems.forEach(
 );
 
 var downloadPDF = document.querySelector('#DownloadPDF');
+var downloadPDFPhone = document.querySelector('#DownloadPDFPhone');
 var downloadWord = document.querySelector('#DownloadPDF');
 
 
 downloadPDF.addEventListener(
+    "click",
+    () => {
+        downloadFile();
+    }
+);
+downloadPDFPhone.addEventListener(
     "click",
     () => {
         downloadFile();
