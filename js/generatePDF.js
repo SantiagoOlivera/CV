@@ -1,6 +1,3 @@
-
-
-
 function generatePDF(
         person,
         work_experience,
@@ -12,9 +9,19 @@ function generatePDF(
 
     var base64 = getBase64Image(document.getElementById("personalDataImage"));
     //var image =  new FileReader(person.image);
-    var pdf = new jsPDF();
-            
+    
+    
 
+    var pdf = new jsPDF();
+    
+    
+    
+    //console.log(pdf.getFontList());
+    
+    pdf.setFont('RobotoCondensed-Regular');
+
+  
+    pdf.setFontSize(30);
     
     
     
@@ -38,6 +45,19 @@ function generatePDF(
     //`${}`
     
     //------------------------------------------Personal Data-----------------------------------------
+        //Personal Data Width Height
+        //console.log(pdf.getFontList());
+
+       
+       
+
+        //pdf.setFontType('sans-serif');
+        pdf.rect(
+            70,  //positionX
+            20,  //positionY
+            80,  //rectWidth
+            45   //rectHeight
+        ); 
         pdf.text(75,25, `${person.name} ${person.secondName} ${person.lastname} `);
         pdf.text(75,25, `${person.name} ${person.secondName} ${person.lastname} `);    
 
@@ -55,7 +75,10 @@ function generatePDF(
     
 
     //-------------------------------------------Work Experience-------------------------------------------
-        pdf.setFontSize(20);
+     
+    
+    
+       pdf.setFontSize(20);
 
         //Experiencia Laboral
         var TAMANIO_CUADRO = pdf.getTextDimensions(
@@ -241,5 +264,4 @@ function getBase64Image(img) {
     var dataURL = canvas.toDataURL("image/png");
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 }
-  
-  
+

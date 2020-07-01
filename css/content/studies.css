@@ -35,7 +35,7 @@
     overflow: auto;
     padding: 20px;
     border: 1px solid lightgray;
-    text-align: center;
+    /* text-align: center; */
 }
 .study-item-programming-tools{    
     display: flex;

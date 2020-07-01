@@ -17,7 +17,11 @@
 
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
+    
+    <!-- cdn jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha256-DupmmuWppxPjtcG83ndhh/32A9xDMRFYkGOVzvpfSIk=" crossorigin="anonymous"></script>
+    <script src="./fonts/Roboto-Regular-normal.js"></script>
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="index.css">
@@ -874,12 +878,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <input type="file" id="font" onchange="getBase64Font(event)">
                     </footer>
                  </div>
                  
          </div>
 
-
+         
 
 
          <!-- classes -->
@@ -926,7 +931,7 @@
 
          <!-- Generate PDF -->
          <script src="/js/generatePDF.js"></script>
-    
+         <script src="/fonts/FontsPDF.js"></script>
 </body>
 </html>
 
