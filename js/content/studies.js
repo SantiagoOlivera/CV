@@ -119,12 +119,12 @@ function setStudiesItemsHTMLText(studies){
                         </p>
                     </div>
                     <br>
+                    <h4>
+                        <span idTranslate="24">
+                            Herramientas de Programacion utilizados
+                        </span>
+                    </h4>
                     <div class="study-item-programming-tools">
-                        <h4>
-                            <span idTranslate="24">
-                                Herramientas de Programacion utilizados
-                            </span>
-                        </h4>
                         ${ programingToolsHTMLText }
                     </div>
                 </div>

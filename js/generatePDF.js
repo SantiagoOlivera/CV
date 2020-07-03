@@ -208,21 +208,13 @@ function getWordTranslatedToPDF(idTranslate){
 }
 
 function getBase64Image(img) {
-    
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200){
-            var canvas = xhttp.responseText;
-            canvas.width = img.width;
-            canvas.height = img.height;
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
-            var dataURL = canvas.toDataURL("image/png");
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        }
-        xhttp.open("GET", "./img/profile/profile-photo.jpg" ,false);
-        xhttp.send();
-    }   
+    var canvas = document.createElement("canvas");;
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");  
 }
 
 function drawPersonalDateRect(
