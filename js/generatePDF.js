@@ -5,71 +5,23 @@ function generatePDF(
         idioms,
         knowledges,
         my_better_skillsidiom
-    ){
-
-    var base64 = getBase64Image(document.getElementById("personalDataImage"));
-    //var image =  new FileReader(person.image);
+){
     
-    
-
     var pdf = new jsPDF();
-    
-    
-    
+    //show fonts loaded
     //console.log(pdf.getFontList());
-    
+    //set Font
     pdf.setFont('RobotoCondensed-Regular');
-
-  
-    pdf.setFontSize(30);
     
-    
-    
-    //hoja 1
-    pdf.addImage(
-        //base64 file
-        base64, 
-        //tipo de imagen
-        'JPEG',
-        //distance of left
-        20, 
-        //distance of top
-        20,
-        //width
-        45, 
-        //height
-        45
-    );
-
     
     //`${}`
     
-    //------------------------------------------Personal Data-----------------------------------------
-        //Personal Data Width Height
-        //console.log(pdf.getFontList());
-
-       
-       
-
-        //pdf.setFontType('sans-serif');
-        pdf.rect(
-            70,  //positionX
-            20,  //positionY
-            80,  //rectWidth
-            45   //rectHeight
-        ); 
-        pdf.text(75,25, `${person.name} ${person.secondName} ${person.lastname} `);
-        pdf.text(75,25, `${person.name} ${person.secondName} ${person.lastname} `);    
-
-        pdf.setFontSize(10);
-        //Birthdate
-        pdf.text(75,30, `${getWordTranslatedToPDF(1)}: ${person.birthdate.getDate()} ${ getWordTranslatedToPDF(new GenericFunction().getMonthName(person.birthdate.getMonth()+1).idTranslate)} ${person.birthdate.getFullYear()}`);
-        //Age
-        pdf.text(75,35, `${getWordTranslatedToPDF(2)}: ${person.getAge()} ${getWordTranslatedToPDF(3)}`);
-        //Email
-        pdf.text(75,40, `Email: ${person.email}`);
-        //Nationality
-        pdf.text(75,45, `${getWordTranslatedToPDF(4)}: ${ getWordTranslatedToPDF(person.nationality[1])}`);
+    //Personal Data
+        drawPersonalDateRect(
+            pdf,
+            person,
+            getBase64Image(document.querySelector("#personalDataImage"))
+        );
         
     //------------------------------------------Fin Personal Data-----------------------------------------
     
@@ -256,12 +208,56 @@ function getWordTranslatedToPDF(idTranslate){
 }
 
 function getBase64Image(img) {
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-    var dataURL = canvas.toDataURL("image/png");
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (xhttp.readyState == 4 && xhttp.status == 200){
+            var canvas = xhttp.responseText;
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+            var dataURL = canvas.toDataURL("image/png");
+            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+        }
+        xhttp.open("GET", "./img/profile/profile-photo.jpg" ,false);
+        xhttp.send();
+    }   
 }
 
+function drawPersonalDateRect(
+    pdf,
+    person,
+    photo,
+){
+    //draw header with personal information in the cv
+    //set rect color
+    pdf.setFillColor(255, 204, 0);
+    pdf.rect(
+        0,  //positionX
+        0,  //positionY
+        210,  //rectWidth
+        65,  //rectHeight
+        'F' //F: for Fill, FD: Fill and Border
+    );   
+    //add Image
+    pdf.addImage(
+        photo, //base64 file
+        'JPEG', //tipo de imagen
+        10, //distance of left
+        10, //distance of top
+        45, //width
+        45 //height
+    );
+    pdf.setFontSize(35);
+    pdf.text(65,20, `${person.name} ${person.secondName} ${person.lastname} `);    
+    pdf.setFontSize(15);
+    //Birthdate
+    pdf.text(65,30, `${getWordTranslatedToPDF(1)}: ${person.birthdate.getDate()} ${ getWordTranslatedToPDF(new GenericFunction().getMonthName(person.birthdate.getMonth()+1).idTranslate)} ${person.birthdate.getFullYear()}`);
+    //Age
+    pdf.text(65,37, `${getWordTranslatedToPDF(2)}: ${person.getAge()}${getWordTranslatedToPDF(3)}`);
+    //Email
+    pdf.text(65,44, `Email: ${person.email}`);
+    //Nationality
+    pdf.text(65,51, `${getWordTranslatedToPDF(4)}: ${ getWordTranslatedToPDF(person.nationality[1])}`);
+}
