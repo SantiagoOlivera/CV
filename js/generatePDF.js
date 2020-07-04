@@ -208,13 +208,52 @@ function getWordTranslatedToPDF(idTranslate){
 }
 
 function getBase64Image(img) {
-    var canvas = document.createElement("canvas");;
+
+    
+    
+    var canvas = document.createElement("canvas");
+    
     canvas.width = img.naturalWidth;
     canvas.height = img.naturalHeight;
+    
     var ctx = canvas.getContext("2d");
+    
+    console.log(ctx);
+    
     ctx.drawImage(img, 0, 0);
+    ctx.save();
+    ctx.globalCompositeOperation="destination-out";
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(10,0);
+    ctx.arcTo(0,0,0,100,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(200,0);
+    ctx.lineTo(190,0);
+    ctx.arcTo(200,0,200,100,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(0,200);
+    ctx.lineTo(0,190);
+    ctx.arcTo(0,200,100,200,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(200,200);
+    ctx.lineTo(190,200);
+    ctx.arcTo(200,200,200,100,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+    //des.src=can.toDataURL("image/png");
+
     var dataURL = canvas.toDataURL("image/png");
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");  
+
+
 }
 
 function drawPersonalDateRect(
@@ -225,22 +264,27 @@ function drawPersonalDateRect(
     //draw header with personal information in the cv
     //set rect color
     pdf.setFillColor(255, 204, 0);
+    //pdf.setFillColor(224,224,224);
+
+
     pdf.rect(
-        0,  //positionX
-        0,  //positionY
-        210,  //rectWidth
+        0,   //positionX
+        0,   //positionY
+        210, //rectWidth
         65,  //rectHeight
-        'F' //F: for Fill, FD: Fill and Border
-    );   
+        'F'  //F: for Fill, FD: Fill and Border
+    ); 
+
     //add Image
     pdf.addImage(
-        photo, //base64 file
+        photo,  //base64 file
         'JPEG', //tipo de imagen
-        10, //distance of left
-        10, //distance of top
-        45, //width
-        45 //height
+        10,     //distance of left
+        10,     //distance of top
+        45,     //width
+        45      //height
     );
+    
     pdf.setFontSize(35);
     pdf.text(65,20, `${person.name} ${person.secondName} ${person.lastname} `);    
     pdf.setFontSize(15);
@@ -252,4 +296,17 @@ function drawPersonalDateRect(
     pdf.text(65,44, `Email: ${person.email}`);
     //Nationality
     pdf.text(65,51, `${getWordTranslatedToPDF(4)}: ${ getWordTranslatedToPDF(person.nationality[1])}`);
+
+
+}
+
+function grayscaleImageData(imageData) {
+	var data = imageData.data
+  for (var i = 0; i < data.length; i += 4) {
+    var brightness = 0.34 * data[i] + 0.5 * data[i + 1] + 0.16 * data[i + 2]
+    data[i] = brightness
+    data[i + 1] = brightness
+    data[i + 2] = brightness
+  }
+  return imageData
 }
