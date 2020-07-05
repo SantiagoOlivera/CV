@@ -209,17 +209,17 @@ function getWordTranslatedToPDF(idTranslate){
 
 function getBase64Image(img) {
 
-    
-    
     var canvas = document.createElement("canvas");
-    
     canvas.width = img.naturalWidth;
     canvas.height = img.naturalHeight;
-    
     var ctx = canvas.getContext("2d");
-    
+
+    ctx.filter = "grayscale(90%)";
+
     console.log(ctx);
-    
+
+
+
     ctx.drawImage(img, 0, 0);
     ctx.save();
     ctx.globalCompositeOperation="destination-out";
@@ -248,11 +248,12 @@ function getBase64Image(img) {
     ctx.closePath();
     ctx.fill();
     ctx.restore();
-    //des.src=can.toDataURL("image/png");
+    
+    
+    
 
     var dataURL = canvas.toDataURL("image/png");
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");  
-
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, ""); 
 
 }
 
@@ -300,13 +301,6 @@ function drawPersonalDateRect(
 
 }
 
-function grayscaleImageData(imageData) {
-	var data = imageData.data
-  for (var i = 0; i < data.length; i += 4) {
-    var brightness = 0.34 * data[i] + 0.5 * data[i + 1] + 0.16 * data[i + 2]
-    data[i] = brightness
-    data[i + 1] = brightness
-    data[i + 2] = brightness
-  }
-  return imageData
-}
+
+
+
