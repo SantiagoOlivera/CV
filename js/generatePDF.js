@@ -17,163 +17,22 @@ function generatePDF(
     //`${}`
     
     //Personal Data
-        drawPersonalDateRect(
-            pdf,
-            person,
-            getBase64Image(document.querySelector("#personalDataImage"))
-        );
-        
-    //------------------------------------------Fin Personal Data-----------------------------------------
-    
-
-    //-------------------------------------------Work Experience-------------------------------------------
+    drawPersonalDataSection(
+        pdf,
+        person,
+        getBase64Image(document.querySelector("#personalDataImage"))
+    );
+    //Work Experience
+    drawWorkExperiencesSection(
+        pdf,
+        work_experience
+    );
      
     
     
-       pdf.setFontSize(20);
+       
 
-        //Experiencia Laboral
-        var TAMANIO_CUADRO = pdf.getTextDimensions(
-            `${getWordTranslatedToPDF(10)}`
-        );
-        pdf.text(20,75, `${getWordTranslatedToPDF(10)}`);
-
-        pdf.setFontSize(15);
-
-        var cont1 = 0;
-        //Espacios entre Items
-        var POSICION_INICIAL = 85;
-        var SPACE1 = 0;
-        var SPACE2 = 0;
-        var SPACE3 = 0;
-        var SPACE4 = 0;
-        var SPACE5 = 0;
-        var SPACE6 = 0;
-        var SPACE7 = 0;
-        var SPACE8 = 0;
-        var SPACE9 = 0;
         
-        var ESPACIO_TOTAL = 100; 
-
-        work_experience.forEach(
-            element => {
-
-                pdf.setFontSize(15);
-
-                if(cont1*120>220){
-                    pdf.addPage();
-                    POSICION_INICIAL = 20;
-                    cont1 = 0; 
-                }
-
-                /*
-
-                    console.log(SPACE1);
-                    console.log(SPACE2);
-                    console.log(SPACE3);
-                    console.log(SPACE4);
-                    console.log(SPACE5);
-                    console.log(SPACE6);
-                    console.log(SPACE7);
-                    console.log(SPACE8);
-                    console.log(SPACE9); 
-                
-                */
-                
-
-                //HEIGHT SPACES BETWEEN TEXT
-                SPACE1 = POSICION_INICIAL + (cont1*120);
-                SPACE2 = 5  + SPACE1;
-                SPACE3 = 5  + SPACE2;
-                SPACE4 = 5  + SPACE3;
-                SPACE5 = 5  + SPACE4;
-                SPACE6 = 7  + SPACE5;
-                SPACE7 = 5  + SPACE6;
-
-                var ESPACIO_DESCRIPTION = (pdf.getTextDimensions(pdf.splitTextToSize(element.description[0], 180)).h);
-                console.log(ESPACIO_DESCRIPTION);
-                SPACE8 = ( ESPACIO_DESCRIPTION + SPACE7 ) // - (15 - (pdf.getTextDimensions(pdf.splitTextToSize(element.description[0], 180)).h));
-                SPACE9 = 5  + SPACE8;
-
-                //year
-                pdf.text(
-                    20,
-                    SPACE1,
-                    `${element.year}`
-                );
-
-                //change fontsize
-                pdf.setFontSize(10);
-                
-                //title
-                pdf.text(
-                    20,
-                    SPACE2,
-                    `${element.title[0]}`
-                );
-                //Start
-                pdf.text(
-                    20,
-                    SPACE3,
-                    `${getWordTranslatedToPDF(18)}: ${getWordTranslatedToPDF(new GenericFunction().getMonthName((element.startDate.getMonth()+1)).idTranslate)} ${element.startDate.getFullYear()}`
-                );
-                //End
-                pdf.text(
-                    20,
-                    SPACE4,
-                    `${getWordTranslatedToPDF(19)}: ${getWordTranslatedToPDF(new GenericFunction().getMonthName((element.endDate.getMonth()+1)).idTranslate)} ${element.endDate.getFullYear()}`
-                );
-                //time
-                pdf.text(
-                    20,
-                    SPACE5,
-                    `${getWordTranslatedToPDF(17)}: ${element.time.years===0 ? '' : element.time.years} ${element.time.years===0 ? '' : element.time.years===1 ? getWordTranslatedToPDF(15) : getWordTranslatedToPDF(16)} ${element.time.months===0 ? '' : element.time.months} ${element.time.months===0 ? '' : element.time.months===1 ? getWordTranslatedToPDF(20) : getWordTranslatedToPDF(21)} ${element.time.days===0 ? '' : element.time.days} ${element.time.days===0 ? '' : element.time.days===1 ? getWordTranslatedToPDF(22) : getWordTranslatedToPDF(23)}`
-                );
-                //tasks
-                pdf.setFontSize(15);
-                pdf.text(
-                    20,
-                    SPACE6,
-                    `${getWordTranslatedToPDF(30)}`
-                );
-                //description
-                pdf.setFontSize(10);
-                pdf.text(
-                    20,
-                    SPACE7,
-                    pdf.splitTextToSize(element.description[0], 180)
-                );
-                //Programming Tools Used
-                //console.log( pdf.getTextDimensions(pdf.splitTextToSize(element.description[0], 180)) );
-                //console.log(SPACE8);
-                pdf.setFontSize(15);
-                pdf.text(
-                    20,
-                    SPACE8,
-                    `${getWordTranslatedToPDF(24) }`
-                );
-
-                //programming languages
-                pdf.setFontSize(10);
-                element.programingTools.forEach(
-                    
-                    element => {
-
-                        pdf.text(
-                            20,
-                            SPACE9,
-                            `- ${element.title}`  
-                        );
-
-                        SPACE9 +=5; 
-                    }
-                );
-                
-                cont1++;
-
-            }
-        ); 
-
 
 
     //-------------------------------------------Fin Work Experience-------------------------------------------
@@ -214,50 +73,18 @@ function getBase64Image(img) {
     canvas.height = img.naturalHeight;
     var ctx = canvas.getContext("2d");
 
-    ctx.filter = "grayscale(90%)";
 
     console.log(ctx);
 
-
-
-    ctx.drawImage(img, 0, 0);
-    ctx.save();
-    ctx.globalCompositeOperation="destination-out";
-    ctx.beginPath();
-    ctx.moveTo(0,0);
-    ctx.lineTo(10,0);
-    ctx.arcTo(0,0,0,100,100);
-    ctx.closePath();
-    ctx.fill();
-    ctx.beginPath();
-    ctx.moveTo(200,0);
-    ctx.lineTo(190,0);
-    ctx.arcTo(200,0,200,100,100);
-    ctx.closePath();
-    ctx.fill();
-    ctx.beginPath();
-    ctx.moveTo(0,200);
-    ctx.lineTo(0,190);
-    ctx.arcTo(0,200,100,200,100);
-    ctx.closePath();
-    ctx.fill();
-    ctx.beginPath();
-    ctx.moveTo(200,200);
-    ctx.lineTo(190,200);
-    ctx.arcTo(200,200,200,100,100);
-    ctx.closePath();
-    ctx.fill();
-    ctx.restore();
+    ctx = grayScaleImage(ctx);
+    ctx = roundedBordersImage(ctx, img);
     
-    
-    
-
     var dataURL = canvas.toDataURL("image/png");
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, ""); 
 
 }
 
-function drawPersonalDateRect(
+function drawPersonalDataSection(
     pdf,
     person,
     photo,
@@ -303,4 +130,192 @@ function drawPersonalDateRect(
 
 
 
+function grayScaleImage(ctx){
+    ctx.filter = "grayscale(90%)";
 
+    return ctx;
+
+}
+
+function roundedBordersImage(ctx,img){
+    
+    ctx.drawImage(img, 0, 0);
+    ctx.save();
+    ctx.globalCompositeOperation="destination-out";
+    ctx.beginPath();
+    ctx.moveTo(0,0);
+    ctx.lineTo(10,0);
+    ctx.arcTo(0,0,0,100,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(200,0);
+    ctx.lineTo(190,0);
+    ctx.arcTo(200,0,200,100,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(0,200);
+    ctx.lineTo(0,190);
+    ctx.arcTo(0,200,100,200,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(200,200);
+    ctx.lineTo(190,200);
+    ctx.arcTo(200,200,200,100,100);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+
+
+    return ctx;
+}
+
+
+function drawWorkExperiencesSection(
+    pdf,
+    work_experience
+){
+    //Title
+    pdf.setFontSize(20);
+    pdf.text(20,75, `${getWordTranslatedToPDF(10)}`);
+
+    //
+    _paperWidth = 220;
+    _paperHeight = 297;
+    _squareWidth = 80;
+    _squareHeight = 90;
+    _squareMarginLeft = 20;
+    _squareMarginTop = 80
+    
+
+    work_experience.forEach(
+        element => {
+            
+            //draw Rect
+            pdf.setLineWidth(2);
+            pdf.setDrawColor(255, 204, 0);
+            //pdf.setFillColor(255, 204, 0);
+            pdf.rect(
+                _squareMarginLeft, //positionX
+                _squareMarginTop, //positionY
+                _squareWidth,    //rectWidth
+                _squareHeight,  //rectHeight
+            ); 
+
+            
+            
+            //draw work experience items
+            drawWorkExperienceItem(
+                pdf,
+                element,
+                _squareMarginLeft,
+                _squareMarginTop,
+                _squareWidth
+            );
+            
+
+            if(_squareMarginLeft + _squareWidth*2 > _paperWidth){
+                _squareMarginLeft = 20;
+                _squareMarginTop  += _squareHeight + 10;
+                if((_squareMarginTop + _squareHeight) > _paperHeight){
+                    pdf.addPage();
+                    _squareMarginTop = 20;
+                    _squareMarginLeft = 20;
+                }
+            }else{
+                _squareMarginLeft += _squareWidth + 10;                
+            }
+            
+
+            
+
+
+
+        }
+    );
+
+}
+
+
+function drawWorkExperienceItem(
+    pdf,
+    element,
+    _squareMarginLeft,
+    _squareMarginTop,
+    _squareWidth
+){
+    pdf.setFontSize(20);
+    //year
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 7,
+        `${element.year}`
+    );
+    //change fontsize
+    pdf.setFontSize(15);
+    //title
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 15,
+        `${element.title[0]}`
+    );
+    pdf.setFontSize(10);
+    //Start
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 20,
+        `${getWordTranslatedToPDF(18)}: ${getWordTranslatedToPDF(new GenericFunction().getMonthName((element.startDate.getMonth()+1)).idTranslate)} ${element.startDate.getFullYear()}`
+    );
+    //End
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 25,
+        `${getWordTranslatedToPDF(19)}: ${getWordTranslatedToPDF(new GenericFunction().getMonthName((element.endDate.getMonth()+1)).idTranslate)} ${element.endDate.getFullYear()}`
+    );
+    //time
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 30,
+        `${getWordTranslatedToPDF(17)}: ${element.time.years===0 ? '' : element.time.years} ${element.time.years===0 ? '' : element.time.years===1 ? getWordTranslatedToPDF(15) : getWordTranslatedToPDF(16)} ${element.time.months===0 ? '' : element.time.months} ${element.time.months===0 ? '' : element.time.months===1 ? getWordTranslatedToPDF(20) : getWordTranslatedToPDF(21)} ${element.time.days===0 ? '' : element.time.days} ${element.time.days===0 ? '' : element.time.days===1 ? getWordTranslatedToPDF(22) : getWordTranslatedToPDF(23)}`
+    );
+    //tasks
+    pdf.setFontSize(13);
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 37,
+        `${getWordTranslatedToPDF(30)}`
+    );
+    //description
+    pdf.setFontSize(10);
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 42,
+        pdf.splitTextToSize(element.description[0], _squareWidth-3)
+    );
+    //Programming Tools Used
+    //console.log( pdf.getTextDimensions(pdf.splitTextToSize(element.description[0], 180)) );
+    //console.log(SPACE8);
+    pdf.setFontSize(13);
+    var _descriptionHeight = pdf.getTextDimensions(pdf.splitTextToSize(element.description[0], 180)).h;
+    pdf.text(
+        _squareMarginLeft + 3,
+        _squareMarginTop + 48 + _descriptionHeight,
+        `${getWordTranslatedToPDF(24) }`
+    );
+
+    pdf.setFontSize(10);
+    var cont = 5;
+    element.programingTools.forEach(
+        element => {
+            pdf.text(
+                _squareMarginLeft + 3,
+                _squareMarginTop + 48 + _descriptionHeight + cont, 
+                `- ${element.title}`  
+            );
+            cont+=5;
+        }
+    );
+
+}
