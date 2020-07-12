@@ -90,78 +90,7 @@ function loadObjects(){
                     new ProgrammingTool('Java'),
                 ]
             ),
-            new Work(
-                2019,
-                ["Istorming S.A.",0], 
-                new Date('05/02/2019'), 
-                new Date(), /* actualidad */
-                ['Programación en Meta4. Manejo de Base de Datos Oracle SQL. Programación de integraciones API REST con Java. Desarrollo de reportes con Meta4',0],
-                [
-                    new ProgrammingTool('Meta4'),
-                    new ProgrammingTool('Oracle SQL with Toad'),
-                    new ProgrammingTool('Java'),
-                ]
-            ), 
-            new Work(
-                2019,
-                ["Istorming S.A.",0], 
-                new Date('05/02/2019'), 
-                new Date(), /* actualidad */
-                ['Programación en Meta4. Manejo de Base de Datos Oracle SQL. Programación de integraciones API REST con Java. Desarrollo de reportes con Meta4',0],
-                [
-                    new ProgrammingTool('Meta4'),
-                    new ProgrammingTool('Oracle SQL with Toad'),
-                    new ProgrammingTool('Java'),
-                ]
-            ), 
-            new Work(
-                2019,
-                ["Istorming S.A.",0], 
-                new Date('05/02/2019'), 
-                new Date(), /* actualidad */
-                ['Programación en Meta4. Manejo de Base de Datos Oracle SQL. Programación de integraciones API REST con Java. Desarrollo de reportes con Meta4',0],
-                [
-                    new ProgrammingTool('Meta4'),
-                    new ProgrammingTool('Oracle SQL with Toad'),
-                    new ProgrammingTool('Java'),
-                ]
-            ), 
-            new Work(
-                2019,
-                ["Istorming S.A.",0], 
-                new Date('05/02/2019'), 
-                new Date(), /* actualidad */
-                ['Programación en Meta4. Manejo de Base de Datos Oracle SQL. Programación de integraciones API REST con Java. Desarrollo de reportes con Meta4',0],
-                [
-                    new ProgrammingTool('Meta4'),
-                    new ProgrammingTool('Oracle SQL with Toad'),
-                    new ProgrammingTool('Java'),
-                ]
-            ), 
-            new Work(
-                2019,
-                ["Istorming S.A.",0], 
-                new Date('05/02/2019'), 
-                new Date(), /* actualidad */
-                ['Programación en Meta4. Manejo de Base de Datos Oracle SQL. Programación de integraciones API REST con Java. Desarrollo de reportes con Meta4',0],
-                [
-                    new ProgrammingTool('Meta4'),
-                    new ProgrammingTool('Oracle SQL with Toad'),
-                    new ProgrammingTool('Java'),
-                ]
-            ), 
-            new Work(
-                2019,
-                ["Istorming S.A.",0], 
-                new Date('05/02/2019'), 
-                new Date(), /* actualidad */
-                ['Programación en Meta4. Manejo de Base de Datos Oracle SQL. Programación de integraciones API REST con Java. Desarrollo de reportes con Meta4',0],
-                [
-                    new ProgrammingTool('Meta4'),
-                    new ProgrammingTool('Oracle SQL with Toad'),
-                    new ProgrammingTool('Java'),
-                ]
-            ), 
+            
         ];
 
         var studies = [

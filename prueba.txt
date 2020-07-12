@@ -4,11 +4,131 @@ function generatePDF(
         studies,
         idioms,
         knowledges,
-        my_better_skillsidiom
+        my_better_skills
 ){
     
-    var pdf = new PDF();
-    pdf.savePDF("Santiago Ariel Olivera CV")
+    var pdf = new jsPDF();
+    //show fonts loaded
+    //console.log(pdf.getFontList());
+    //set Font
+    pdf.setFont('RobotoCondensed-Regular');
+    
+    
+    //`${}`
+    var _paperWidth = 220;
+    var _paperHeight = 297;
+    /* var _squareWidth = 80; */
+    /*  var _squareHeight = 90; */
+    var _marginLeft = 0;
+    var _marginTop = 0;
+    
+    //Personal Data
+    drawPersonalDataSection(
+        pdf,
+        person,
+        getBase64Image(document.querySelector("#personalDataImage"))
+    );
+    //Work Experience
+    drawWorkExperiencesSection(
+        pdf,
+        work_experience
+    );
+    //Studies
+    drawWorkStudiesSection(
+        pdf,
+        studies
+    );
+    
+    //-------------------------------------------Fin Work Experience-------------------------------------------
+    //pdf.addPage();
+    //pdf.text(20,20,'TEST PAGE 2!');
+
+    pdf.save("Santiago Ariel Olivera CV.pdf");
+
+
+}
+
+
+function getWordTranslatedToPDF(idTranslate){
+    //this function brings the word indexed translated 
+    //according to the idiom selected in the page
+    
+        switch(document.querySelector('#idiomSelected').getAttribute('idiom')){
+            case 'spanish':
+                return translations[idTranslate].ESP;
+                break;
+            case 'english':
+                return translations[idTranslate].ENG;
+                break;
+            case 'german':
+                return translations[idTranslate].GER;
+                break;
+            default:
+                return translations[idTranslate].ESP;
+
+        
+    }
+}
+
+function getBase64Image(img) {
+
+    var canvas = document.createElement("canvas");
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    var ctx = canvas.getContext("2d");
+
+
+    console.log(ctx);
+
+    ctx = grayScaleImage(ctx);
+    ctx = roundedBordersImage(ctx, img);
+    
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, ""); 
+
+}
+
+function drawPersonalDataSection(
+    pdf,
+    person,
+    photo,
+){
+    //draw header with personal information in the cv
+    //set rect color
+    pdf.setFillColor(255, 204, 0);
+    //pdf.setFillColor(224,224,224);
+
+
+    pdf.rect(
+        0,   //positionX
+        0,   //positionY
+        210, //rectWidth
+        65,  //rectHeight
+        'F'  //F: for Fill, FD: Fill and Border
+    ); 
+
+    //add Image
+    pdf.addImage(
+        photo,  //base64 file
+        'JPEG', //tipo de imagen
+        10,     //distance of left
+        10,     //distance of top
+        45,     //width
+        45      //height
+    );
+    
+    pdf.setFontSize(35);
+    pdf.text(65,20, `${person.name} ${person.secondName} ${person.lastname} `);    
+    pdf.setFontSize(15);
+    //Birthdate
+    pdf.text(65,30, `${getWordTranslatedToPDF(1)}: ${person.birthdate.getDate()} ${ getWordTranslatedToPDF(new GenericFunction().getMonthName(person.birthdate.getMonth()+1).idTranslate)} ${person.birthdate.getFullYear()}`);
+    //Age
+    pdf.text(65,37, `${getWordTranslatedToPDF(2)}: ${person.getAge()}${getWordTranslatedToPDF(3)}`);
+    //Email
+    pdf.text(65,44, `Email: ${person.email}`);
+    //Nationality
+    pdf.text(65,51, `${getWordTranslatedToPDF(4)}: ${ getWordTranslatedToPDF(person.nationality[1])}`);
+
 
 }
 
@@ -66,20 +186,13 @@ function drawWorkExperiencesSection(
     pdf.text(20,75, `${getWordTranslatedToPDF(10)}`);
 
     //
-    _paperWidth = 220;
-    _paperHeight = 297;
-    _squareWidth = 80;
-    _squareHeight = 90;
-    _squareMarginLeft = 20;
-    _squareMarginTop = 80
-    
-
     work_experience.forEach(
         element => {
             
             //draw Rect
             pdf.setLineWidth(2);
             pdf.setDrawColor(255, 204, 0);
+
             //pdf.setFillColor(255, 204, 0);
             pdf.rect(
                 _squareMarginLeft, //positionX
@@ -99,23 +212,13 @@ function drawWorkExperiencesSection(
                 _squareWidth
             );
             
-
-            if(_squareMarginLeft + _squareWidth*2 > _paperWidth){
-                _squareMarginLeft = 20;
-                _squareMarginTop  += _squareHeight + 10;
-                if((_squareMarginTop + _squareHeight) > _paperHeight){
-                    pdf.addPage();
-                    _squareMarginTop = 20;
-                    _squareMarginLeft = 20;
-                }
-            }else{
-                _squareMarginLeft += _squareWidth + 10;                
-            }
             
 
-            
+        }
+    );
 
-
+    studies.forEach(
+        element =>{
 
         }
     );
@@ -202,4 +305,30 @@ function drawWorkExperienceItem(
         }
     );
 
+}
+
+
+function setPositionItem(
+    _squareMarginLeft,
+    _squareMarginTop,
+    _paperWidth,
+    _paperHeight
+
+){
+    if(_squareMarginLeft + _squareWidth*2 > _paperWidth){
+        
+        _squareMarginLeft = 20;
+        _squareMarginTop  += _squareHeight + 10;
+
+
+
+        if((_squareMarginTop + _squareHeight) > _paperHeight){
+            pdf.addPage();
+            _squareMarginTop = 20;
+            _squareMarginLeft = 20;
+        }
+
+    }else{
+        _squareMarginLeft += _squareWidth + 10;                
+    }
 }
