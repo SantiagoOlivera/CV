@@ -2,13 +2,27 @@ class PDF{
 
     
 
-    constructor(){
+    constructor(
+        filename,
+        docType
+    ){
         this.pdf = new jsPDF();
+        this.docType = docType;
+        this.filename = filename;
         this.positionX = 0;
         this.positionY = 0;
-        
     }
     
+    generateFile(){
+        switch(this.docType){
+            case "CV":
+                
+                //generateCV();
+                this.pdf.text(20,20,"Prueba");
+                this.savePDF(this.filename);
+                break;
+        }
+    }
     
     posionateItem(
         positionX,
@@ -17,14 +31,18 @@ class PDF{
 
     }
 
+    savePDF(filename){
+        this.pdf.save(filename + '.pdf');
+    }
+
+    generateCV(){
+
+    }
+
     addPage(){
         this.pdf.addPage();
         this.positionX = 0;
         this.positionY = 0;
-    }
-
-    savePDF(name){
-        this.pdf.save(name + '.pdf');
     }
 
     setFont(fontName){

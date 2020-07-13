@@ -7,8 +7,9 @@ function generatePDF(
         my_better_skillsidiom
 ){
     
-    var pdf = new PDF();
-    pdf.savePDF("Santiago Ariel Olivera CV")
+    var pdf = new PDF("Santiago Ariel Olivera CV","CV");
+    pdf.setFont("RobotoCondensed-Regular");
+    pdf.generateFile();
 
 }
 
