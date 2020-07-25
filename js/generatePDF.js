@@ -9,7 +9,7 @@ function generatePDF(
     
     var pdf = new PDF("Santiago Ariel Olivera CV","CV");
     pdf.setFont("RobotoCondensed-Regular");
-    pdf.generateFile();
+    pdf.generateFile(data.objs);
 
 }
 

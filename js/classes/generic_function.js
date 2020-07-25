@@ -50,8 +50,10 @@ class GenericFunction{
     getMonthName(month){
         
             return {
+
                 name: monthsNames.spanish[month],
                 idTranslate: 100 + month 
+                
             }
                    
         
@@ -117,6 +119,45 @@ class GenericFunction{
 
     } */
 
+    formatDate(
+        date,
+        format
+    ){
+        var idiom = document.querySelector('#idiomSelected').getAttribute('idiom');
+
+        if(idiom){
+            switch(format){
+                case 1:
+    
+                    switch(idiom){
+                        case 'spanish':
+                            return date.getDate() + ' de ' + monthsNames.spanish[date.getMonth()+1] + ' de ' + date.getFullYear();
+                        break;
+                        case 'english':
+                            var lastcharacter = date.getDate().toString();
+                            var dayPostfix = lastcharacter === '1' ? 'st': lastcharacter === '2' ? 'nd' : lastcharacter === '3' ? 'rd' : 'th'
+                            return monthsNames.english[date.getMonth()+1] + ' ' + date.getDate() + dayPostfix + ' ' + date.getFullYear();
+                        break;
+                        case 'german':
+                            return date.getDate() + ' ' + monthsNames.english[date.getMonth()+1] + ' ' + date.getFullYear() ;
+                        break;
+                        default:
+                            return date.getDate() + ' de ' + monthsNames.spanish[date.getMonth()+1] + ' de ' + date.getFullYear();
+                            break;
+                    }
+                    
+                break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                default:
+                    return date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
+            }
+
+        }
+        
+    }
 
 }
 
@@ -147,7 +188,7 @@ const monthsNames = {
         7:  'July',
         8:  'August',
         9:  'September',
-        10: 'Octuber',
+        10: 'October',
         11: 'November',
         12: 'December',
     } ,

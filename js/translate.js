@@ -39,6 +39,36 @@ function translate(idiom){
     
 }
 
+function getWordTranslatedById(
+    idTranlation
+){
+    
+    if(translations[idTranlation]){ 
+
+        var idiom = document.querySelector('#idiomSelected').getAttribute('idiom');
+
+        if(idiom){
+            switch(idiom){
+                case 'spanish':
+                    return translations[idTranlation].ESP;
+                    break;
+                case 'english':
+                    return translations[idTranlation].ENG;
+                    break;
+                case 'german':
+                    return translations[idTranlation].GER;
+                    break;
+                default:
+                    return translations[idTranlation].ESP;
+            }
+        }
+
+    }
+
+    return 'No translation word';
+
+}
+
 const translations = {
     // Fecha de Nacimiento
     1: {
