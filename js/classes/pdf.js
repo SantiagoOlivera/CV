@@ -6,7 +6,7 @@ class PDF{
         filename,
         docType
     ){
-        this.pdf = new jsPDF();
+        this.pdf = new jsPDF('p','mm','a4');
         this.docType = docType;
         this.filename = filename;
     }
@@ -479,8 +479,16 @@ class PDF{
         
         var block = document.createElement("canvas");
         
-        var width = 210*10;
-        var height = 50*10;
+        //block size
+        var width = 793;//props.width*10;
+        var height = 188;//props.width*10;
+        //margin
+        var margin =18;// props.margin*10;
+
+        var padding = 18;
+        //quantity elements 
+        var cant = 2;
+
 
         block.setAttribute('width', width);
         block.setAttribute('height', height);
@@ -490,32 +498,64 @@ class PDF{
 
         var ctx = block.getContext("2d");
         ctx.fillStyle = "white";
-        ctx.fillRect(2, 2, width - 4, height - 4);
-        
+        //ctx.fillRect(2, 2, width - 4, height - 4);
+        ctx.fillRect(0, 0, width, height);
+
+
+        ctx.lineWidth = 1;
+
 
         //top
-        /* ctx.moveTo(5, 5);
-        ctx.lineTo(width, 5);
+        ctx.moveTo(0, 0);
+        ctx.lineTo(width , 0);
         ctx.stroke(); 
 
         //left
-        ctx.moveTo(5, 5);
-        ctx.lineTo(5, height);
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, height);
         ctx.stroke(); 
         
         //right
-        ctx.moveTo(width, 5);
-        ctx.lineTo(width, height);
+        ctx.moveTo(width, 0);
+        ctx.lineTo(width , height);
         ctx.stroke(); 
 
         //bottom
-        ctx.moveTo(5, height);
-        ctx.lineTo(height, width);
-        ctx.stroke();  */
+        ctx.moveTo(0, height);
+        ctx.lineTo(width, height);
+        ctx.stroke(); 
+
+
+        var rectWidth = (width - (padding * (cant+1))) / cant;
+        var rectHeight = height - (padding * cant);
+
+        //rect
+        ctx.beginPath();
+        ctx.rect(
+            margin, 
+            margin,
+            rectWidth,
+            rectHeight
+        );
+        ctx.stroke();
 
 
 
-        return block;
+        //rect
+        ctx.beginPath();
+        ctx.rect( 
+            margin*2+ rectWidth ,
+            margin,
+            rectWidth,
+            rectHeight
+        )
+        ctx.stroke();
+
+
+        //return block;
+
+        var dataURL = block.toDataURL("image/png");
+        return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 
     }
 
