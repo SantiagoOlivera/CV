@@ -133,7 +133,7 @@ class PDF{
                     obj.positionY,     //distance of top
                     obj.width,         //width
                     obj.height         //height
-                )
+                );
             break;
 
             case 'block':
@@ -487,7 +487,7 @@ class PDF{
 
         var padding = 18;
         //quantity elements 
-        var cant = 2;
+        var cant = 4;
 
 
         block.setAttribute('width', width);
@@ -527,29 +527,68 @@ class PDF{
 
 
         var rectWidth = (width - (padding * (cant+1))) / cant;
-        var rectHeight = height - (padding * cant);
+        var rectHeight = height - (padding*2);
 
         //rect
-        ctx.beginPath();
+        /* ctx.beginPath();
         ctx.rect(
             margin, 
             margin,
             rectWidth,
             rectHeight
         );
-        ctx.stroke();
+        ctx.stroke(); */
 
 
 
         //rect
+
+        /* for(var i=0;i<cant;i++){
+            ctx.beginPath();
+            ctx.rect( 
+                (padding + (padding*i)) + (rectWidth*i) ,
+                padding,
+                rectWidth,
+                rectHeight
+            );
+            ctx.stroke();
+        } */
+
+        var roundBorder = 50;
+
+        padding = 20;
+
+        ctx.lineWidth = 1;
+
+        //top
+        /* ctx.moveTo( padding , padding);
+        ctx.lineTo(rectWidth , padding);
+        ctx.stroke();  */
+
         ctx.beginPath();
-        ctx.rect( 
-            margin*2+ rectWidth ,
-            margin,
-            rectWidth,
-            rectHeight
-        )
-        ctx.stroke();
+
+        ctx.moveTo(20,20);
+        ctx.lineTo(150,20);         
+        ctx.arcTo(200,20,200,70,50); 
+        ctx.lineTo(200,170);      
+        ctx.stroke(); 
+
+        //left
+        ctx.moveTo(0, 0);
+        ctx.lineTo(0, height);
+        ctx.stroke(); 
+        
+        //right
+        ctx.moveTo(width, 0);
+        ctx.lineTo(width , height);
+        ctx.stroke(); 
+
+        //bottom
+        ctx.moveTo(0, height);
+        ctx.lineTo(width, height);
+        ctx.stroke(); 
+        
+        
 
 
         //return block;
